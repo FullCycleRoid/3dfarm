@@ -1,0 +1,94 @@
+.first-screen {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-screen__left {
+  position: relative;
+}
+
+.first-screen__right,
+.send-file-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-screen .first-screen__right #calc-btn {
+    position: absolute;
+    margin: 120px 0 0 -180px;
+    width: 252px;
+    height: 116px;
+    background-color: $primaryColor;
+    z-index: 1000;
+    font-size: 2em;
+    border: none;
+    color: $secondaryColor;
+    white-space: normal;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.first-screen__right {
+
+}
+
+.first-screen .first-screen__right #calc-btn:hover {
+    background-color: #93100e;
+}
+
+.first-screen__right__text-block {
+    padding: 20px 0 0 0
+}
+
+
+.first-screen__right__title {
+  color: $primaryColor;
+  padding: 0 0 15px 0;
+}
+
+.first-screen__left__title {
+  color: $thirdColor;
+  font-size: 4em;
+  padding: 0 0 120px 150px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+}
+
+#right_btn {
+  height: 50px;
+  width: 400px;
+  margin: 20px 0 0 0;
+  background-color: #de2221;
+  border:none;
+  color: $secondaryColor;
+  white-space: normal;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#right_btn:hover {
+  background-color: $primaryColor;
+}
+
+.send-file__title {
+  padding: 0 0 10px 0;
+}
+
+.first-screen__left__title {
+  padding: 150px 0 0 250px;
+  font-size: 6em;
+}
+
+.send-file-block {
+  position: absolute;
+  left: 10%;
+  bottom:0;
+}
+
+.send-file-block input {
+  padding: 10px;
+  margin: 10px;
+  color: #6c757d;
+}
+
+.send-file__comment {
+  height:100px;
+}

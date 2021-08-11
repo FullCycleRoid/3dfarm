@@ -1,0 +1,21 @@
+{
+  "name": "3dfarm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "engines": {
+    "node": "v14.3.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0"
+  }
+}

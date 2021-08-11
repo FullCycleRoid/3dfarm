@@ -1,0 +1,177 @@
+@import "css/_variables.scss";
+@import "css/_utilities.scss";
+@import "css/_grid.scss";
+@import "css/_materials.scss";
+@import "css/_metal.scss";
+@import "css/_first-screen.scss";
+@import "css/_main.scss";
+@import "css/_header.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	color: $thirdColor;
+	font: 16px $primaryFontFamily;
+    overflow-x:hidden;
+    background-color: #eee;
+}
+
+section {
+  padding: 50px 0 0 0;
+}
+
+.section__title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+br {
+  padding: 10px 0 10px 0;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+  color: #24242a;
+  text-transform: uppercase;
+  margin: 20px 0 20px 0;
+  font-weight: 600;
+}
+
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 700;
+
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.small-text {
+  font-size: 1.3em;
+}
+
+.bg-white {
+    background-color: $secondaryColor;
+    color: #2B2828;
+}
+
+.bg-red {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+.bg-dark {
+    background-color: $thirdColor;
+}
+
+.text-bg-white {
+  color: $secondaryColor
+}
+
+.text-bg-red {
+  color: $primaryColor;
+}
+
+.text-bg-dark {
+  color: $thirdColor
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+.materials {
+    margin: 15px 0 0 0;
+    height: 850px;
+    display:flex
+}
+
+.materials__block {
+    display: flex;
+    flex-direction: row;
+}
+
+.materials__title {
+    color: #777777;
+    margin: 0px 0 60px 0;
+}
+
+.materials__title h1{
+    font-size: 7em;
+    width: 300px;
+}
+
+.materials_text {
+    font-size: 2.5em;
+    width: 600px;
+}
+
+.materials__block img {
+    width:1000px
+}
+
+.div-table {
+  padding: 100px 0 0 0;
+  display: table;
+  width: 700px;
+  background-color: #eee;
+  border: 1px solid #666666;
+  border-spacing: 5px;
+}
+
+.material-table {
+    position: relative;
+    margin: -100px 0 0 0;
+}
+
+.div-table-row {
+  display: table-row;
+  width: 250px;
+  position: absolute;
+}
+
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;
+  width: 300px;
+  background-color: #eeeeee;
+}
+
+.divCell {
+    font-size: 1.5em;
+
+}
+
+.contacts {
+    height: 450px;
+    background-color: #FF4140;
+}
+
+.wow_offer {
+  font-size:1.2em;
+  color: firebrick;
+}
+
