@@ -2,6 +2,7 @@ import React from "react";
 import Gallery from "../components/gallery";
 import first_img from "../images/image_01.jpg"
 import MyCarousel from "../components/gallery";
+import Materials from "../components/materials";
 
 
 
@@ -36,9 +37,10 @@ function Home() {
             </div>       
             <section className="equipment">
                 <div className="equipment-circle-block">
-                    <div className="equipment-circle-block-item">
-                        <MyCarousel/>
-                    </div>
+                    <div className="equipment-circle-block-item"></div>
+                    <div className="equipment-circle-block-item"></div>
+                    <div className="equipment-circle-block-item"></div>
+                    <div className="equipment-circle-block-item"></div>
                 </div>
                 <div className="container flex-container align-center direction-column">
                     <h5 className="section__title">Серийные заказы в кратчайшие сроки</h5>
@@ -91,7 +93,12 @@ function Home() {
                     </tbody>
                     </table>
                 </div>
-            </section> 
+            </section>
+            <section>
+                <div className="materials">
+                    <Materials />
+                </div>
+            </section>
             <section>
                 <div className="container">
                     <div className="gallery">

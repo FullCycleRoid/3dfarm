@@ -380,7 +380,7 @@
   margin: 120px 0 0 -130px;
   width: 252px;
   height: 116px;
-  background-color: #de2221;
+  background-color: #FF4140;
   z-index: 1000;
   font-size: 2em;
   border: none;
@@ -402,7 +402,7 @@
 }
 
 .first-screen__right__title {
-  color: #de2221;
+  color: #FF4140;
 }
 
 .first-screen__left__title {
@@ -431,7 +431,7 @@
 }
 
 #right_btn:hover {
-  background-color: #de2221;
+  background-color: #FF4140;
 }
 
 .first-screen__left__title {
@@ -440,7 +440,7 @@
   width: 560px;
 }
 .first-screen__left__title span {
-  color: #de2221;
+  color: #FF4140;
 }
 
 .equipment .section__title {
@@ -496,7 +496,7 @@
 }
 
 .equipment {
-  background-color: #de2221;
+  background-color: #FF4140;
   margin: 220px 0 50px 0;
   padding: 50px 0 50px 0;
   color: #e5e5e5;
@@ -530,9 +530,42 @@
 }
 
 .equipment-circle-block-item {
-  margin: -180px auto 50px auto;
+  border: 2px solid #FF4140;
+  border-top-color: #9a9898;
+  border-left-color: #9a9898;
+  transform: rotate(45deg);
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+  text-align: center;
+  display: block;
+  margin: -125px auto 50px auto;
   border-radius: 100px;
-  width: 100%;
+}
+
+.material-title {
+  flex: 1 0 100%;
+}
+
+.material-block {
+  text-align: center;
+  margin: 20px 20px;
+  flex: 1 0 45%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.material-block h3 {
+  flex: 1 1 100%;
+  background-color: #3e3e3e;
+  padding: 5px;
+  color: #eee;
+}
+
+.material-block-main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -544,7 +577,7 @@
 }
 
 .logo-red {
-  color: #de2221;
+  color: #FF4140;
   background-color: #FFFFFF;
   font-family: "'Roboto', sans-serif";
 }
@@ -569,7 +602,7 @@
 }
 
 .header__logo span {
-  color: #de2221;
+  color: #FF4140;
   font-family: "Share Tech Mono", monospace;
 }
 
@@ -690,11 +723,11 @@ p {
 }
 
 .send-file__btn {
-  background-color: #de2221;
+  background-color: #FF4140;
 }
 
 .bg-red {
-  background-color: #de2221;
+  background-color: #FF4140;
   color: #eee;
 }
 
@@ -707,7 +740,7 @@ p {
 }
 
 .text-bg-red {
-  color: #de2221;
+  color: #FF4140;
 }
 
 .text-bg-dark {
@@ -720,8 +753,8 @@ p {
 
 .materials {
   margin: 15px 0 0 0;
-  height: 850px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .materials__block {
