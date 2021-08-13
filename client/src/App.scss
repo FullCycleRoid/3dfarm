@@ -34,10 +34,8 @@ br {
 h1, h2, h3, h4, h5 , h6 {
   color: #24242a;
   text-transform: uppercase;
-  margin: 20px 0 20px 0;
   font-weight: 600;
 }
-
 
 h1 {
   font-size: 4em;
@@ -64,6 +62,8 @@ h5 {
 
 p {
     font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 .small-text {
@@ -75,9 +75,13 @@ p {
     color: #2B2828;
 }
 
+.send-file__btn {
+  background-color: $primaryColor;
+}
+
 .bg-red {
     background-color: $primaryColor;
-    color: $secondaryColor;
+    color: #eee;
 }
 
 .bg-dark {
@@ -100,8 +104,6 @@ p {
 .text-center {
   text-align: center;
 }
-
-
 
 .materials {
     margin: 15px 0 0 0;

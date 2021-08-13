@@ -1,5 +1,8 @@
 import React from "react";
+import Gallery from "../components/gallery";
 import first_img from "../images/image_01.jpg"
+import MyCarousel from "../components/gallery";
+
 
 
 function Home() {
@@ -7,44 +10,45 @@ function Home() {
         <React.Fragment>
             <div className="first-screen">
             <div className="first-screen__left">
-                            <h2 className="first-screen__left__title">3D ферма</h2>
-                            <div className="send-file-block">
-                            <h5 className="send-file__title">Загрузите файл в формате STL,SLDPT или архив для рассчета стоимости</h5>
-                            <input type="file"/>
-                            <input type="text" value="Введите телефон для обратной связи" />
-                            <input  className="send-file__comment" type="text" value="Оставьте дополнительную информацию если требуется" />
-                            <input type="submit" value="Отправить запрос" />
-                        </div>
+                    <h2 className="first-screen__left__title"><span>СКИДКИ </span> ПРИ СЕРИЙНОЙ ПЕЧАТИ</h2>
+                    <div className="send-file-block">
+                        <h5 className="send-file__title">Загрузите STL файл или архив для рассчета стоимости</h5>
+                        <input type="file"/>
+                        <input type="text" value="Введите телефон для обратной связи" />
+                        <input  className="send-file__comment" type="text" value="Оставьте дополнительную информацию если требуется" />
+                        <input className="send-file-btn" type="submit" value="Отправить запрос" />
+                    </div>
                 </div>
                 <div className="first-screen__right">
                     <input id="calc-btn" type="button" value="Консультация инженера" />
                     <img src={first_img} alt="" />
                     <div className="first-screen__right__text-block">
-                    <h4 className="first-screen__right__title">Самая доступная печать металлом в России</h4>
-                    <p>Профессиональное оборудование</p>
-                    <p>Печать металлом от 100 руб/см3</p>
-                    <p>Материал: Нержавеющая сталь 316l</p>
-                    <p>CAD моделирование 700 руб/час</p>
-                    <p>График работы: Пн-Пт с 08.00 до 20.00</p>
-                    <p>E-mail: feedmetal@gmail.com</p>
-                    <p>Тел.: +7 904 332-89-40</p>
+                        <h4 className="first-screen__right__title">Самая доступная печать в России</h4>
+                        <p>FDM Печать от 200 в час</p>
+                        <p>Инженерные пластики и гибкие материалы</p>
+                        <p>CAD моделирование 700 руб/час</p>
+                        <p>График работы: Пн-Пт с 08.00 до 20.00</p>
+                        <p>E-mail: feedmetal@gmail.com</p>
+                        <p>Тел.: +7 904 332-89-40</p>
                     </div>
                     <input id="right_btn" type="submit" value="Консультация инженера" />
-
                 </div>
             </div>       
-            <div className="equipment">
+            <section className="equipment">
+                <div className="equipment-circle-block">
+                    <div className="equipment-circle-block-item">
+                        <MyCarousel/>
+                    </div>
+                </div>
                 <div className="container flex-container align-center direction-column">
-                    <h2 className="section__title">ТЕХНОЛОГИИ И УСЛУГИ</h2>
-                    <p className="section__subtitle">Парк оборудования позволяет в кротчайшие сроки выпорлнять серийные заказы</p>
-
+                    <h5 className="section__title">Серийные заказы в кратчайшие сроки</h5>
                     <table className="table">
                     <thead>
                         <tr>
-                        <th scope="col">технология</th>
-                        <th scope="col">Зона печати</th>
-                        <th scope="col">Точность</th>
-                        <th scope="col">Цена</th>
+                        <th scope="col">ТЕХНОЛОГИЯ</th>
+                        <th scope="col">ЗОНА ПЕЧАТИ</th>
+                        <th scope="col">ТОЧНОСТЬ</th>
+                        <th scope="col">ЦЕНА</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,7 +91,16 @@ function Home() {
                     </tbody>
                     </table>
                 </div>
-            </div> 
+            </section> 
+            <section>
+                <div className="container">
+                    <div className="gallery">
+                        <div className="gallery-inner">
+                            <MyCarousel/>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div className="contacts">
                 <h1>Контакты</h1>
                 <img className="contacts-map" src="" alt="" />

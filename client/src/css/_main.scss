@@ -1,7 +1,7 @@
 .equipment {
-  background-color: #FF4140;
-  height: 800px;
-  margin: 30px 0 0 0;
+  background-color: $primaryColor;
+  margin: 220px 0 50px 0;
+  padding: 50px 0 50px 0;
   color: $secondaryColor;
   font-size: 20px;
 }
@@ -9,21 +9,9 @@
 .equipment .section__title {
   width: 100%;
   display:block;
-  padding: 30px 0 0 0;
   text-align: center;
   color: $secondaryColor
 }
-
-//.equipment .section__title::after {
-// display: block;
-//   content: '';
-//  width: 35%;
-//  height: 5px;
-//  background: darkred;
-//  position: absolute;
-//  bottom: -15px;
-//  left: 33%;
-//}
 
 .section__subtitle {
   text-align: center;
@@ -31,3 +19,37 @@
   width: 60%;
   margin: auto;
 }
+
+.carousel-slider {
+  position: absolute;
+  left: 20%
+}
+
+.equipment-circle-block {
+  position: relative;
+  display: flex;
+  width:1400px;
+  margin: auto;
+
+}
+
+.equipment-circle-block-item{
+  margin: -180px auto 50px auto;
+  border-radius: 100px;
+  width: 100%;
+}
+
+
+//.equipment-circle-block-item{
+//  border: 2px solid $primaryColor;
+//  border-top-color: #9a9898;
+//  border-left-color: #9a9898;
+//  transform: rotate(45deg);
+//  width: 150px;
+//  height: 150px;
+//  background-color: #eee;
+//  text-align: center;
+//  display:block;
+//  margin: -125px auto 50px auto;
+//  border-radius: 100px;
+//}

@@ -11,7 +11,7 @@ let imgArray = [
     "/static/images/process/process4.jpg",
 ];
 
-let counter = 0
+let counter = 0;
 setImage(counter)
 
 let onScrollHandler = function(e) {
@@ -21,7 +21,7 @@ let onScrollHandler = function(e) {
         changeTitleActiveStatus(counter)
         changeParagraphActiveStatus(counter)
     }
-}
+};
 
 function changeTitleActiveStatus(counter) {
     if (counter <= 0) {
