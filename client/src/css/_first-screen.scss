@@ -1,6 +1,7 @@
 .first-screen {
     display: flex;
     justify-content: space-between;
+    margin: 0 0 150px 0;
 }
 
 .first-screen__left {
@@ -38,7 +39,6 @@
 .first-screen__right__text-block p {
   margin: 10px 0;
 }
-
 
 .first-screen__right__title {
   color: $primaryColor;

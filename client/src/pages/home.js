@@ -100,39 +100,40 @@ function Home() {
                 </div>
             </section>
             <section>
-                <div className="container">
-                    <div className="gallery">
-                        <div className="gallery-inner">
-                            <MyCarousel/>
+                <div className="flex-container align-center direction-column">
+                    <h3 className="section__title">РАБОТЫ</h3>
+                    <div className="gallery-inner">
+                        <MyCarousel/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="contacts">
+                    <h1>Контакты</h1>
+                    <img className="contacts-map" src="" alt="" />
+                    <div className="contacts__body">
+                    <div className="divTable">
+                    </div>
+                        <div className="div-table-col">
+                            <div className="divRow">
+                                <div className="divCell">Телефон:</div>
+                                <div  className="divCell">Email:</div>
+                                <div  className="divCell">Адресс</div>
+                                <div  className="divCell">График работы:</div>
+                            </div>
+                        </div>
+                        <div className="div-table-col">
+                                <div className="divRow">
+                                <div className="divCell">561 MPa</div>
+                                <div className="divCell">251 MPa</div>
+                                <div className="divCell">53%</div>
+                                <div className="divCell">128HV10</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <div className="contacts">
-                <h1>Контакты</h1>
-                <img className="contacts-map" src="" alt="" />
-                <div className="contacts__body">
-                <div className="divTable">
-                </div>         
-                    <div className="div-table-col">
-                        <div className="divRow">
-                            <div className="divCell">Телефон:</div>
-                            <div  className="divCell">Email:</div>
-                            <div  className="divCell">Адресс</div>
-                            <div  className="divCell">График работы:</div>
-                        </div>
-                    </div>
-                    <div className="div-table-col">
-                            <div className="divRow">
-                            <div className="divCell">561 MPa</div>
-                            <div className="divCell">251 MPa</div>
-                            <div className="divCell">53%</div>
-                            <div className="divCell">128HV10</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </React.Fragment> 
+      </React.Fragment>
     )
 }
 
