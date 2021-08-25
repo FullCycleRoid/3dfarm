@@ -7,9 +7,9 @@
 }
 
 .logo-red {
-    color: $primaryColor;
+    color: var(--primaryColor);
     background-color: #FFFFFF;
-    font-family: $primaryFontFamily;
+    font-family: var(--primaryFontFamily);
 }
 
 .logo-white {
@@ -24,7 +24,7 @@
 
 .header__logo {
     font-weight: bold;
-    color: $thirdColor;
+    color: var(--primaryColor);
     font-size: 5em;
     text-decoration: none;
     cursor: pointer;
@@ -32,7 +32,7 @@
 }
 
 .header__logo span {
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-family: 'Share Tech Mono', monospace;
 }
 
@@ -40,7 +40,7 @@
 .header__logo:hover,
 .header__logo:active {
     text-decoration: none;
-    color: $thirdColor;
+    color: var(--primaryColor);
     cursor: pointer;
 }
 

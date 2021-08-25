@@ -1,24 +1,42 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React from "react";
-import img1 from "../images/slider/img1.jpg"
-import img2 from "../images/slider/img2.jpg"
-import img3 from "../images/slider/img3.jpg"
-import img4 from "../images/slider/img4.jpg"
-import img5 from "../images/slider/img5.jpg"
-import img6 from "../images/slider/img6.jpg"
-import img7 from "../images/slider/img7.jpg"
-import img8 from "../images/slider/img8.jpg"
-import img9 from "../images/slider/img9.jpg"
-import img10 from "../images/slider/img10.jpg"
-import img11 from "../images/slider/img11.jpg"
-import img12 from "../images/slider/img12.jpg"
-import img13 from "../images/slider/img13.jpg"
-import img14 from "../images/slider/img14.jpg"
-import img15 from "../images/slider/img15.jpg"
-import img16 from "../images/slider/img16.jpg"
-import img17 from "../images/slider/img17.jpg"
-import img18 from "../images/slider/img18.jpg"
-import img19 from "../images/slider/img19.jpg"
+import img1 from "../images/gallery/img1.jpg"
+import img2 from "../images/gallery/img2.jpg"
+import img3 from "../images/gallery/img3.jpg"
+import img4 from "../images/gallery/img4.jpg"
+import img5 from "../images/gallery/img5.jpg"
+import img6 from "../images/gallery/img6.jpg"
+import img7 from "../images/gallery/img7.jpg"
+import img8 from "../images/gallery/img8.jpg"
+import img9 from "../images/gallery/img9.jpg"
+import img10 from "../images/gallery/img10.jpg"
+import img11 from "../images/gallery/img11.jpg"
+import img12 from "../images/gallery/img12.jpg"
+import img13 from "../images/gallery/img13.jpg"
+import img14 from "../images/gallery/img14.jpg"
+import img15 from "../images/gallery/img15.jpg"
+import img16 from "../images/gallery/img16.jpg"
+import img17 from "../images/gallery/img17.jpg"
+import img18 from "../images/gallery/img18.jpg"
+import img19 from "../images/gallery/img19.jpg"
+import img20 from "../images/gallery/img20.jpg"
+import img21 from "../images/gallery/img21.jpg"
+import img22 from "../images/gallery/img22.jpg"
+import img23 from "../images/gallery/img23.jpg"
+import img24 from "../images/gallery/img24.jpg"
+
+import img30 from "../images/gallery/img30.png"
+import img31 from "../images/gallery/img31.png"
+import img32 from "../images/gallery/img32.jpg"
+import img33 from "../images/gallery/img33.png"
+import img34 from "../images/gallery/img34.jpg"
+import img35 from "../images/gallery/img35.jpg"
+import img36 from "../images/gallery/img36.jpg"
+import img37 from "../images/gallery/img37.jpg"
+import img38 from "../images/gallery/img38.png"
+import img39 from "../images/gallery/img39.png"
+import img40 from "../images/gallery/img40.jpg"
+
 
 
 import {Divider} from "@material-ui/core";
@@ -98,43 +116,55 @@ export default class MyCarousel extends React.Component {
                     <div className="gallery-img">
                         <img className="" src={img19} alt=""/>
                     </div>
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img20} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img21} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img22} alt=""/>*/}
-                   {/* </div>*/}
-                   {/*<div className="gallery-img">*/}
-                   {/*     <img className="" src={img23} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img24} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img25} alt=""/>*/}
-                   {/* </div>*/}
+                    <div className="gallery-img">
+                        <img className="" src={img20} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img21} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img22} alt=""/>
+                    </div>
+                   <div className="gallery-img">
+                        <img className="" src={img23} alt=""/>
+                    </div>
+                   <div className="gallery-img">
+                        <img className="" src={img24} alt=""/>
+                    </div>
 
-                   {/*<div className="gallery-img">*/}
-                   {/*     <img className="" src={img30} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img31} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img32} alt=""/>*/}
-                   {/* </div>*/}
-                   {/*<div className="gallery-img">*/}
-                   {/*     <img className="" src={img33} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img34} alt=""/>*/}
-                   {/* </div>*/}
-                   {/* <div className="gallery-img">*/}
-                   {/*     <img className="" src={img35} alt=""/>*/}
-                   {/* </div>*/}
+                   <div className="gallery-img">
+                        <img className="" src={img30} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img31} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img32} alt=""/>
+                    </div>
+                   <div className="gallery-img">
+                        <img className="" src={img33} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img34} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img35} alt=""/>
+                    </div>
+                     <div className="gallery-img">
+                        <img className="" src={img36} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img37} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img38} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img39} alt=""/>
+                    </div>
+                    <div className="gallery-img">
+                        <img className="" src={img40} alt=""/>
+                    </div>
                 </div>
            </React.Fragment>
         )
