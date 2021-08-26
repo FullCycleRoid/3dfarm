@@ -7,27 +7,10 @@ import Frame2 from "../images/at_home/Frame2.png";
 import Frame1 from "../images/at_home/Frame1.png";
 import Frame3 from "../images/at_home/Frame3.png";
 import Frame4 from "../images/at_home/Frame4.png";
-// import scrollScript from "../scroll_slider.js";
 
 
 export default class MetalPage extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.handleLoad = this.handleLoad.bind(this);
-    //  }
 
-    // componentWillMount() {
-    //     window.addEventListener('load', this.handleLoad);
-    // }
-
-    // handleLoad() {
-    //     const script = document.createElement("script");
-    
-    //     script.src = {scrollScript};
-    //     script.async = true;
-    
-    //     document.body.appendChild(script);
-    // }
 
     render() {
         return (

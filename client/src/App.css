@@ -1,10 +1,7 @@
 @import "css/_variables.css";
-@import "css/_utilities.css";
 @import "css/_grid.css";
-/*@import "css/_materials.css";*/
-/*@import "css/_metal.css";*/
-@import "css/_main.css";
 @import "css/_header.css";
+@import "css/_first_screen.css";
 
 * {
   box-sizing: border-box;
@@ -12,9 +9,10 @@
 
 body {
 	color: var(--thirdColor);
-	font: 16px var(--primaryFontFamily);
+	font: 14px var(--primaryFontFamily);
     overflow-x:hidden;
-    background-color: #eee;
+    background-color: #E5E5E5;
+    color: #000000
 }
 
 section {
@@ -63,116 +61,5 @@ p {
     font-size: 1.5em;
     margin: 0;
     padding: 0;
-}
-
-.small-text {
-  font-size: 1.3em;
-}
-
-.bg-white {
-    background-color: var(--secondaryColor);
-    color: #2B2828;
-}
-
-.send-file__btn {
-  background-color: var(--primaryColor);
-}
-
-.bg-red {
-    background-color: var(--primaryColor);
-    color: #eee;
-}
-
-.bg-dark {
-    background-color: var(--thirdColor);
-}
-
-.text-bg-white {
-  color: var(--secondaryColor)
-}
-
-.text-bg-red {
-  color: var(--primaryColor);
-}
-
-.text-bg-dark {
-  color: var(--thirdColor)
-
-}
-
-.text-center {
-  text-align: center;
-}
-
-.materials {
-    margin: 15px 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.materials__block {
-    display: flex;
-    flex-direction: row;
-}
-
-.materials__title {
-    color: #777777;
-    margin: 0px 0 60px 0;
-}
-
-.materials__title h1{
-    font-size: 7em;
-    width: 300px;
-}
-
-.materials_text {
-    font-size: 2.5em;
-    width: 600px;
-}
-
-.materials__block img {
-    width:1000px
-}
-
-.div-table {
-  padding: 100px 0 0 0;
-  display: table;
-  width: 700px;
-  background-color: #eee;
-  border: 1px solid #666666;
-  border-spacing: 5px;
-}
-
-.material-table {
-    position: relative;
-    margin: -100px 0 0 0;
-}
-
-.div-table-row {
-  display: table-row;
-  width: 250px;
-  position: absolute;
-}
-
-.div-table-col {
-  float: left; /* fix for  buggy browsers */
-  display: table-column;
-  width: 300px;
-  background-color: #eeeeee;
-}
-
-.divCell {
-    font-size: 1.5em;
-
-}
-
-.contacts {
-    height: 450px;
-    background-color: #FF4140;
-}
-
-.wow_offer {
-  font-size:1.2em;
-  color: firebrick;
 }
 

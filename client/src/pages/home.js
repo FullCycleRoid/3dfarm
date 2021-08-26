@@ -1,5 +1,4 @@
 import React from "react";
-import Gallery from "../components/gallery";
 import first_img from "../images/image_01.jpg"
 import MyCarousel from "../components/gallery";
 import Materials from "../components/materials";

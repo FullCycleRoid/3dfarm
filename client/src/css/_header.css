@@ -1,9 +1,12 @@
-.header{
+.header-inner{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     height: 80px;
     padding-top: 15px;
+    justify-content: space-between;
+}
+
+.header {
+
 }
 
 .logo-red {
@@ -12,28 +15,17 @@
     font-family: var(--primaryFontFamily);
 }
 
-.logo-white {
-    color: #2B2828;
-    background-color: #FFFFFF;
-}
-
-.logo-dark {
-    color: #FFFFFF;
-    background-color: #1C1B23;
-}
-
 .header__logo {
     font-weight: bold;
     color: var(--primaryColor);
-    font-size: 5em;
+    font-size: 4em;
     text-decoration: none;
     cursor: pointer;
-    padding-left: 20px;
+    font-family: "Bebas Neue";
 }
 
 .header__logo span {
     color: var(--primaryColor);
-    font-family: 'Share Tech Mono', monospace;
 }
 
 
@@ -44,46 +36,39 @@
     cursor: pointer;
 }
 
-
 .navbar {
-    width: 865px;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    align-self: start;
+    text-align: end;
+}
+
+.navbar li {
+    font-weight: bold;
+    font-size: 1em;
+	padding: 17px 5px;
+	display: inline-block;
+	margin: 0;
+    color: #000000
+
 }
 
 .navbar li a {
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+    color: #000000;
+
 }
 
-.navbar ul {
-	margin: 0;
-	padding: 0;
+.navbar li a:hover {
+    text-decoration: none;
+    color: #FF4140;
 }
+
 
 .navbar li:nth-child(7) {
     padding-right: 0;
     margin-right: 0;
 }
 
-.navbar li {
-    font-weight: bold;
+.header-phone {
+	padding: 17px 5px;
     font-size: 1em;
-	padding: 10px 0;
-	display: inline-block;
-	margin: 0;
-}
-
-.navbar li a:hover{
-	text-decoration:none;
-	color: #5a4a4a;
-}
-
-.navbar li.active{
-	background: #29c5e6;
-	color: #fff;
 
 }

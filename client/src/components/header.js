@@ -1,41 +1,29 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import MetalPage from "../pages/metal";
-import Home from "../pages/home";
+
 
 function Header() {
     return (
-        <Router>          
-            <header className="header">
-                <Link  className="header__logo" to="/">
-                    <span className="logo-red">3D</span>FARM
-                </Link>
-                <ul className="navbar">
-                    <li>
-                        <Link className="bg-white" to="/metal">
-                                  ПЕЧАТЬ МЕТАЛЛОМ
-                        </Link>
-                    </li>
-                    <li><a className="bg-white" href="">МАТЕРИАЛЫ</a></li>
-                    <li><a className="bg-white" href="">3D ФЕРМА</a></li>
-                    <li><a className="bg-white" href="">СПЕКАНИЕ</a></li>
-                    <li><a className="bg-white">УСЛУГИ</a></li>
-                    <li><a className="bg-white" href="">КОНТАКТЫ</a></li>
-                </ul>
-            </header>
-            <Switch>
-
-                <Route path="/metal"><MetalPage /></Route>
-                <Route path="/"><Home /></Route>
-            </Switch>
-        </Router>
+        <header className="header">
+            <div className="header-inner">
+                <div>
+                    <a href="" className="header__logo"><span className="logo-red">3D</span>FARM</a>
+                </div>
+                <div className="header-phone">+7 999 312 89 90</div>
+                <div>
+                    <ul className="navbar">
+                        <li><a href="" >Калькулятор</a></li>
+                        <li><a href="" >Галерея</a></li>
+                        <li><a href="" >О ферме</a></li>
+                        <li><a href="" >Материалы</a></li>
+                        <li><a href="" >Моделирование</a></li>
+                        <li><a href="" >Цены</a></li>
+                        <li><a href="" >Доставка</a></li>
+                        <li><a href="" >Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
     )
 }
 
-
-export default Header
+export default Header;

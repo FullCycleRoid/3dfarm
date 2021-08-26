@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-function Footer() {
+function Index() {
     return (
         <React.Fragment>
-            <h1>footer</h1>
+            <h1>body</h1>
         </React.Fragment>
 
     )
 }
 
 
-export default Footer;
+export default Index;

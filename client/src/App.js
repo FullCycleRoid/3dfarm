@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header";
-import MyCarousel from "./components/gallery";
+import Index from "./pages/index";
+import Footer from "./components/footer";
+import FirstScreen from "./components/first_screen";
+
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -13,9 +16,12 @@ function App() {
   }, []);
 
   return (
-      <div className="App">
+    <div className="container">
         <Header />
-      </div>
+        <FirstScreen />
+        {/*<Index />*/}
+        {/*<Footer />*/}
+    </div>
   );
 }
 
