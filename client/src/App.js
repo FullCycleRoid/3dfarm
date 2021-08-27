@@ -4,6 +4,8 @@ import Header from "./components/header";
 import Index from "./pages/index";
 import Footer from "./components/footer";
 import FirstScreen from "./components/first_screen";
+import Calculator from "./components/calculator";
+import Gallery from "./components/gallery";
 
 
 function App() {
@@ -19,7 +21,8 @@ function App() {
     <div className="container">
         <Header />
         <FirstScreen />
-        {/*<Index />*/}
+        <Calculator />
+        <Gallery />
         {/*<Footer />*/}
     </div>
   );

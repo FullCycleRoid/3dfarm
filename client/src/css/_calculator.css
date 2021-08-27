@@ -1,0 +1,38 @@
+.calculator {
+    margin: 120px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.calculator-footer-block__btn{
+    width:80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 1px solid #000000;
+}
+
+.calculator-footer-block {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.calculator-footer-block__title {
+    font-size: 1.5em;
+    margin: 20px 0;
+    width: 500px
+}
+
+.card {
+    width: 1180px;
+    height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    margin: 60px auto 0 auto;
+}
+
+.calculator-footer-block__btn img {
+    margin: 14px 0 0 14px
+}

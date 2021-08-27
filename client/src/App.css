@@ -2,6 +2,8 @@
 @import "css/_grid.css";
 @import "css/_header.css";
 @import "css/_first_screen.css";
+@import "css/_calculator.css";
+@import "css/_gallery.css";
 
 * {
   box-sizing: border-box;
@@ -32,6 +34,7 @@ h1, h2, h3, h4, h5 , h6 {
   color: #24242a;
   text-transform: uppercase;
   font-weight: 600;
+
 }
 
 h1 {
@@ -42,6 +45,7 @@ h1 {
 h2 {
   font-size: 3em;
   font-weight: 700;
+  font-family: "Bebas Neue";
 
 }
 
@@ -63,3 +67,19 @@ p {
     padding: 0;
 }
 
+.title_block {
+    display: flex;
+    justify-content: space-between;
+    height: 2px;
+    border-top: 1px solid #000000;
+}
+
+.title {
+    font-size: 2em;
+    width: 850px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    padding: 5px;
+}
