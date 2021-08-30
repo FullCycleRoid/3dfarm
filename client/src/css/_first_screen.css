@@ -16,3 +16,10 @@
 .first-screen__title-block__subtitle {
     width: 400px
 }
+
+
+.first-screen img {
+    /*transform: scale(1.1);
+    */
+    width: 650px
+}

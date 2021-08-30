@@ -1,0 +1,17 @@
+.delivery  {
+    margin: 120px 0 120px 0;
+}
+
+.delivery-block {
+    margin: 400px 0 120px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-item {
+    text-align: center;
+}
+
+.delivery-item img {
+    margin: 0 0 15px 0
+}

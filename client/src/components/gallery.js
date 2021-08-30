@@ -13,7 +13,7 @@ export default class Gallery extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="gallery">
                 <div className="title_block">
                     <h2 className="title">Галерея</h2>
                 </div>
@@ -32,8 +32,13 @@ export default class Gallery extends React.Component {
                     <img src={img6} alt=""/>
                     <img src={img7} alt=""/>
                     <img src={img8} alt=""/>
+                    <img src={img5} alt=""/>
+                    <img src={img6} alt=""/>
+                    <img src={img7} alt=""/>
+                    <img src={img8} alt=""/>
                 </div>
-            </React.Fragment>
+                <div className="show-more-btn">смотреть больше</div>
+            </div>
         )
     }
 }

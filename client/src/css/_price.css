@@ -1,0 +1,53 @@
+.price {
+    position: relative;
+    height: 60vh;
+    margin: 150px 0 0 0;
+}
+
+
+.price .title_block .title {
+    margin: 0 0 100px 0
+}
+
+.table {
+    margin: 0 auto;
+    width: 1200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table-title,
+.table-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.table-item {
+    color: #848484;
+    font-size: 1.3em;
+}
+
+.cell {
+    flex: 0 0 23%
+}
+
+.table-title {
+    font-size: 1.5em;
+}
+
+.table-item {
+    display: flex;
+}
+
+.table-title .cell {
+    border-top: 1px solid #000000
+}
+
+.table-item:hover {
+    color: #000000;
+    font-size: 1.5em;
+    border-top: 1px solid #000000
+}

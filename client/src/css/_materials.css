@@ -1,85 +1,49 @@
-.material__card {
-    width: 30%;
-    margin: 20px;
-    justify-content: center;
+
+.material-block {
+    display: flex;
+    border-top: 1px solid #000000;
 }
 
-.card-container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.materials .title_block {
+    margin: 120px 0
 }
 
-.card-img-top {
-    width: 100%;
-    height: 285px;
-    align-self: center;
+.material-block-title {
+    font-size: 2em;
+    flex: 1 1 30%
 }
 
-.card-title {
-    padding: 10px;
-}
-
-.card-text {
-    color: #8f8f8f;
-    font-size: 1.3em;
-}
-
-.material__title {
-    margin: 40px 0 0 0;
-    font-size: 3.5em;
-}
-
-.metal__card {
-    margin:20px
+.material-block-body {
+    flex: 1 1 70%
 
 }
 
-.metal__card__img {
-    flex: 0 0 40%;
+.material-block-material {
+    border-top: 1px solid #E5E5E5;
+    color: #949494;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
 }
 
-.metal__card-list {
-    font-size: 20px;
-}
-
-.metal__card-list span {
-    font-size: 20px;
-    padding-left: 20px;
-    font-weight: 600;
-}
-
-.metal__card-body {
-    text-align: start;
-    letter-spacing: 2px;
-    color: #24242a;
-    margin: 20px;
-}
-
-.metal__card-text {
-    color: #8f8f8f;
-}
-
-.materials-section__title {
-    width: 600px
-}
-
-.colors {
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.material-block-item {
+    align-self: flex-start;
+    margin: 0 20px;
+    flex: 1 0 20%
 
 }
 
-.colors li {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: dodgerblue;
-  color: white;
-  margin: 20px 2px 0 2px;
+.material-block-material:nth-child(2):hover,
+.material-block-material:nth-child(3):hover,
+.material-block-material:nth-child(4):hover,
+.material-block-material:nth-child(5):hover,
+.material-block-material:nth-child(6):hover,
+.material-block-material:nth-child(7):hover {
+    color: #000000;
+    border-top: 1px solid #000000;
 }
 
-.colors li::before{
-
+.material-block-material:nth-child(1):hover {
+    color: #000000;
 }

@@ -1,11 +1,16 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header";
-import Index from "./pages/index";
 import Footer from "./components/footer";
 import FirstScreen from "./components/first_screen";
 import Calculator from "./components/calculator";
 import Gallery from "./components/gallery";
+import About from "./components/about";
+import Price from "./components/price";
+import Modeling from "./components/modeling";
+import Materials from "./components/materials";
+import Delivery from "./components/delivery";
+import Contacts from "./components/contacts";
 
 
 function App() {
@@ -18,13 +23,22 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-        <Header />
-        <FirstScreen />
-        <Calculator />
-        <Gallery />
-        {/*<Footer />*/}
-    </div>
+    <React.Fragment>
+        <div className="container">
+            <Header />
+            <FirstScreen />
+            <Calculator />
+            <Gallery />
+            <About />
+            <Materials />
+            <Modeling />
+            <Price />
+            <Delivery />
+            <Contacts />
+
+        </div>
+        <Footer />
+    </React.Fragment>
   );
 }
 

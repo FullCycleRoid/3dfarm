@@ -18,6 +18,10 @@
 
 }
 
+.calculator .title_block .subtitle {
+    text-align: end;
+}
+
 .calculator-footer-block__title {
     font-size: 1.5em;
     margin: 20px 0;

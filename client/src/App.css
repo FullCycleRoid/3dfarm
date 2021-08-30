@@ -4,6 +4,15 @@
 @import "css/_first_screen.css";
 @import "css/_calculator.css";
 @import "css/_gallery.css";
+@import "css/_about.css";
+@import "css/_modeling.css";
+@import "css/_delivery.css";
+@import "css/_materials.css";
+@import "css/_price.css";
+@import "css/_delivery.css";
+@import "css/_footer.css";
+@import "css/_contscts.css";
+
 
 * {
   box-sizing: border-box;
@@ -14,7 +23,6 @@ body {
 	font: 14px var(--primaryFontFamily);
     overflow-x:hidden;
     background-color: #E5E5E5;
-    color: #000000
 }
 
 section {
@@ -70,16 +78,17 @@ p {
 .title_block {
     display: flex;
     justify-content: space-between;
-    height: 2px;
     border-top: 1px solid #000000;
 }
 
 .title {
-    font-size: 2em;
-    width: 850px;
+    font-size: 3em;
+    flex: 1 0 60%;
+
 }
 
 .subtitle {
-    font-size: 1.2em;
+    flex: 1 0 40%;
+    font-size: 1.1em;
     padding: 5px;
 }

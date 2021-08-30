@@ -1,0 +1,118 @@
+
+.modeling .title_block {
+    margin: 120px 0 250px 0
+}
+
+
+.first-modeling-block,
+.second-modeling-block,
+.third-modeling-block,
+.four-modeling-block {
+    display: flex;
+}
+
+.first-modeling-block img {
+    flex: 1 0 50%
+}
+
+.first-modeling-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 20px
+}
+
+.first-modeling-text-title {
+    flex: 1 0 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.first-modeling-text-subtitle {
+    flex: 1 0 45%;
+}
+
+
+.second-modeling-block {
+    margin: 50px 0 50px 0
+}
+
+.second-modeling-block img {
+    margin: 0 0 0 25%;
+    flex: 1 0 25%
+}
+
+.second-block-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 20px
+}
+
+.second-block-text-title {
+    flex: 1 0 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.second-block-text-subtitle {
+    flex: 1 0 45%;
+}
+
+
+
+.third-modeling-block {
+    margin: 50px 0 50px 0;
+    justify-content: flex-start;
+
+}
+
+.third-modeling-block img {
+    margin: 0 50% 0 0;
+    flex: 1 0 25%
+}
+
+.third-block-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px 0 0
+}
+
+.third-block-text-title {
+    flex: 1 0 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.third-block-text-subtitle {
+    flex: 1 0 25%;
+}
+
+
+.four-modeling-block {
+    margin: 50px 0 50px 0;
+    justify-content: flex-start;
+
+}
+
+.four-modeling-block img {
+    margin: 0 0 0 25%;
+    flex: 1 0 50%
+}
+
+.four-block-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 20px
+}
+
+.four-block-text-title {
+    flex: 1 0 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.four-block-text-subtitle {
+    flex: 1 0 25%;
+}
+

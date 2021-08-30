@@ -1,0 +1,31 @@
+.first-block {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 90px auto;
+}
+
+.first-block img {
+    flex: 1 0 50%
+}
+
+.about-text {
+    margin: 0 0 0 25px;
+}
+
+.second-block {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 51%;
+}
+
+.second-block img {
+    margin: 0 0 25px 0
+}
+
+.about-list {
+    font-size: 1.5em;
+}
+
+.about-list li {
+    margin: 20px 0;
+}
