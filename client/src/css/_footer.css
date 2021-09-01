@@ -1,0 +1,30 @@
+.footer {
+    background-color: #B4B4B4;
+    height: 30vh;
+}
+
+.footer-logo {
+    font-size: 6em;
+    font-family: "Bebas Neue";
+    flex: 0 0 50%;
+}
+
+.footer-list {
+    flex: 1 0 50%;
+    margin-bottom: 30px;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 0 0 0;
+    padding: 50px 0 0 0;
+}
+
+.credits {
+    flex: 0 0 50%;
+    font-size: 0.8em;
+}
+

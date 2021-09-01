@@ -1,0 +1,49 @@
+
+.material-block {
+    display: flex;
+    border-top: 1px solid #000000;
+}
+
+.materials .title_block {
+    margin: 120px 0
+}
+
+.material-block-title {
+    font-size: 2em;
+    flex: 1 1 30%
+}
+
+.material-block-body {
+    flex: 1 1 70%
+
+}
+
+.material-block-material {
+    border-top: 1px solid #E5E5E5;
+    color: #949494;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+}
+
+.material-block-item {
+    align-self: flex-start;
+    margin: 0 20px;
+    flex: 1 0 20%
+
+}
+
+.material-block-material:nth-child(2):hover,
+.material-block-material:nth-child(3):hover,
+.material-block-material:nth-child(4):hover,
+.material-block-material:nth-child(5):hover,
+.material-block-material:nth-child(6):hover,
+.material-block-material:nth-child(7):hover {
+    color: #000000;
+    border-top: 1px solid #000000;
+}
+
+.material-block-material:nth-child(1):hover {
+    color: #000000;
+}

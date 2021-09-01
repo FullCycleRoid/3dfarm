@@ -1,0 +1,260 @@
+.metal-first-screen {
+  margin: 100px 0 0 100px;
+  position: relative;
+  /*background-image: url("./images/metal/metal_offer.jpg");*/
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 800px
+}
+
+.metal-first-screen__title {
+  font-size: 5em;
+  color: #24242a;
+  width: 800px;
+  padding: 50px 0 0 0;
+}
+
+.metal-first-screen__title span {
+  color: #FF4140;
+}
+
+.metal-first-screen input {
+  width:250px;
+  height: 50px;
+  background-color: #24242a;
+  color: #eee;
+  font-size: 2em;
+  margin: 350px 0 0 0;
+}
+
+.properties {
+  position: relative;
+  height: 750px;
+  background-color: #FF4140;
+  margin: 30px 0 0 0;
+}
+
+.properties__title {
+  color: #eee;
+  font-size: 4em;
+  padding: 50px 0 0 100px;
+  font-weight: 600;
+}
+
+.properties__first_img {
+  margin: 250px 0 0 200px;
+  width: 250px;
+  height: 230px;
+}
+
+.properties__second_img {
+  width: 300px;
+  height: 300px;
+  margin: 170px 0 0 17%;
+}
+
+.properties__border {
+  border-left: 2px solid black;
+  width:10px;
+  height: 230px;
+  position: absolute;
+  top: 390px;
+  left:180px
+}
+
+.properties__table {
+  display: flex;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  font-size: 2em;
+  color: #eee;
+}
+
+.first_col div,
+.second_col div {
+  border-top: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.first_col {
+  width:500px;
+}
+
+.application {
+  height: 1100px;
+  margin: 30px 0 0 0;
+}
+
+.application__title {
+  padding: 0 0 0 100px;
+}
+
+.application__title:before {
+  content: "";
+  display: block;
+  padding: 20px;
+  border-top: 2px solid black;
+  width: 95%;
+  height: 3px;
+}
+
+.application__body__block {
+  display: flex;
+  margin: 30px 100px;
+}
+
+.application__body__block p {
+  margin-left: 20px;
+}
+
+.print_at_home {
+  position: relative;
+  height: 800px;
+}
+
+.print_at_home__block-title {
+  display: flex;
+  padding: 50px 0 0 100px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.print_at_home__block-title:after {
+  position: absolute;
+  content: "";
+  display: block;
+  margin: -50px 0 0 0;
+  border-top: 2px solid black;
+  width: 90%;
+  height: 3px;
+}
+
+.print_at_home__block-title__title {
+  color: #24242a;
+  width: 700px;
+}
+
+.print_at_home__block-title__paragraph {
+    width: 350px;
+    margin-right: 200px;
+}
+
+.print_at_home__block-title__paragraph p span {
+  color: #FF4140;
+}
+
+.print_at_home__images-block {
+  display: flex;
+  position: absolute;
+  left: 18%;
+  bottom: -450px;
+  width: 1280px;
+  justify-content: center;
+}
+
+.print_at_home__images-block__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.print_at_home__images-block__item img {
+  margin: auto;
+}
+
+.print_at_home__images-block__item p {
+  font-size: 1em;
+  align-self: center;
+  margin: 10px 0 0 0;
+}
+
+.print_at_home__images-block__track {
+  border: 1px solid black;
+  height: 1px;
+  width: 90px;
+  margin-top: 70px;
+}
+
+.process:before {
+  content: "";
+  display: block;
+  margin: 30px 0 0 0;
+  border-top: 2px solid black;
+  width: 290%;
+  height: 3px;
+}
+
+.process__block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 100px 20% 0 20%;
+}
+
+.process__block {
+  flex: 1 1 400px;
+}
+
+.process__line {
+  position: relative;
+  content: "";
+  border-left: 4px solid black;
+  height: 500px;
+  width:3px;
+  margin: 0 0 0 10px;
+}
+
+.point1 {
+  margin: 0 0 0 -10px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF4140;
+  z-index: 1000;
+}
+
+.point2 {
+  margin: 370px 0 0 -15px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF4140;
+  z-index: 1000;
+}
+
+.point3 {
+  margin: 430px 0 0 -15px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF4140;
+  z-index: 1000;
+}
+
+.point4 {
+  margin: 500px 0 0 -15px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FF4140;
+  z-index: 1000;
+}
+
+.process__block__text {
+  margin: 0 0 0 100px;
+}
+
+.active {
+  color: #FF4140;
+}
+
+.inactive {
+  color: #24242a;
+  border-color: #24242a;
+}

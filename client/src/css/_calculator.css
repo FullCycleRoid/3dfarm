@@ -1,0 +1,87 @@
+.calculator {
+    margin: 120px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.calculator-footer-block__btn{
+    width:80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 1px solid #000000;
+}
+
+.first-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20%;
+    font-size: 1.5em;
+}
+
+
+.second-card {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    height: 100px;
+    margin: 10% auto;
+}
+
+.file-settings {
+    flex: 1 0 50%;
+}
+
+.price-list {
+    flex: 1 0 50%;
+}
+
+.second-card-calculator-btn {
+    padding: 5px;
+    font-size: 1.5em;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    flex: 1 0 100%;
+
+}
+
+.first-card-calculator-btn {
+    display: block;
+    padding: 5px;
+    font-size: 1.5em;
+    border: 1px solid #000000;
+    border-radius: 30px;
+}
+
+
+.calculator-footer-block {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.calculator .title_block .subtitle {
+    text-align: end;
+}
+
+.calculator-footer-block__title {
+    font-size: 1.5em;
+    margin: 20px 0;
+    width: 500px
+}
+
+.card {
+    width: 1180px;
+    height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.calculator-footer-block__btn img {
+    margin: 14px 0 0 14px
+}
