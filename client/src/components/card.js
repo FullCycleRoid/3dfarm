@@ -1,5 +1,4 @@
 import React from 'react';
-const NodeStl = require("node-stl");
 const fs = require("fs");
 
 
