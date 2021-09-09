@@ -19,6 +19,10 @@
     padding: 50px;
 }
 
+.has-error {
+    border: 1px solid red;
+}
+
 .contacts {
     position: relative;
     color: #878787;

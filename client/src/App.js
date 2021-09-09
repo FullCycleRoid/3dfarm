@@ -27,7 +27,7 @@ function App() {
         <div className="container">
             <Header />
             <FirstScreen />
-            {/*<Calculator />*/}
+            <Calculator />
             <About />
 
             <Gallery />

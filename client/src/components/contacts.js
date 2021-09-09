@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Form from "./form"
 
 export default class Contacts extends React.Component {
     render() {
@@ -19,20 +19,7 @@ export default class Contacts extends React.Component {
                          Россия, Санкт-Петербург
                     </div>
                 </div>
-                <div className="contacts-form">
-                    <form action="">
-                        <input type="text" placeholder={"email"}/>
-                        <div className="contacts-phone">
-                               <input type="text" placeholder={"телефон"}/>
-                               <input type="checkbox" className="phone-checkbox" />
-                               <label htmlFor="Checkbox">перезвонить мне</label>
-                        </div>
-                        <input type="text" placeholder={"имя"}/>
-                        <input type="file" placeholder={"Выбирите файл"}/>
-                        <textarea rows="10" cols="45" name="text" placeholder={"комментарий"}></textarea>
-                        <input type="submit" className="contact-btn"/>
-                    </form>
-                </div>
+                <Form />
             </div>
         )
     }
