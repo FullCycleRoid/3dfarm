@@ -7,7 +7,7 @@ function Calculator() {
         <div className="calculator">
             <div className="title_block">
                 <h2 className="title">КАЛЬКУЛЯТОР ЦЕНЫ</h2>
-                <h3 className="subtitle">Загрузите STL файл или архив для мгновенного расчета стоимости</h3>
+                <h3 className="subtitle">Загрузите STL файл для быстрого рассчета стоимости</h3>
             </div>
             <Card />
             <div className="calculator-footer-block">

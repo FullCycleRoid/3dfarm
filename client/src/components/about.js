@@ -1,37 +1,28 @@
 import React from 'react';
-import about1 from "../images/about1.png"
-import about2 from "../images/about2.png"
+import img1 from "../images/first-screen.jpg"
 
-export default class Gallery extends React.Component {
+export default class About extends React.Component {
     render() {
         return (
             <div className="about">
-                <div className="title_block">
-                    <h2 className="title">О ферме</h2>
-                    <h3 className="subtitle">Сеть принтеров, связанных единым интерфейсом и
-                                             выполняющих смежные либо дублирующие задачи по печати</h3>
-                </div>
-                <div className="first-block">
-                    <img src={about1} alt=""/>
-                    <div className="about-text">Технология предназначена для ускорения процесса печати крупноформатных
-                                                объектов либо для печати большого количества идентичных изделий.
-                                                Мы стараемся внедрять последние разработки в области 3D печати: технологии,
-                                                материалы и подходы.
+                <div className="first-screen__title-block">
+                    <div className="first-screen__title-block__title">
+                        Принтеры связаные единым интерфейсом - лучшие показателеи с точки зрения цены, качества и сроков.
                     </div>
-                      <div className="about-text">Ферма позволяет быстро печатать крупногараритные модели, разделенные на несколько
-                                                  частей, реализовывать серийные партии изделий или печатать в день заказа
-                      </div>
-                </div>
-                <div className="second-block">
-                    <img src={about2} alt=""/>
+                    <div className="first-screen__title-block__subtitle">
+                    </div>
+
                     <ul className="about-list">
-                        <li>Сегодня на ферме:</li>
-                        <li>сеть профессиональных FDM принтеров</li>
-                        <li>фотополимерные принтеры для точной печати</li>
-                        <li>оборудование для постобработки и сканирования</li>
-                        <li>опытные 3D моделлеры способные выполнить любой заказ</li>
+                        <li>Печать крупных обьектов без склеек</li>
+                        <li>Выжигаемые модели для литья металлов</li>
+                        <li>Литье бронзы, латуни и алюминия</li>
+                        <li>Точная печать фотополимерами</li>
+                        <li>Печать серийных изделий</li>
+                        <li>Все виды моделирования</li>
+                        <li>Бесплатное сканирование точность до 0.1 мм</li>
                     </ul>
                 </div>
+                <img src={img1} alt="" />
             </div>
         )
     }

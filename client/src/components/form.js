@@ -100,9 +100,14 @@ export default class Form extends React.Component {
         axios({method: "POST",
                url: "http://localhost:3100/form",
                data: form,
-              }).then((res) => {
+              })
+            .then((res) => {
                  console.log(res.data.message);
-              });
+              })
+            .catch((err)=> {
+                console.log(err);
+
+            });
         }
 
     render() {

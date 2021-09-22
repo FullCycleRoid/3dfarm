@@ -39,19 +39,40 @@
     text-align: center;
 }
 
+.materials-show-more-btn {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    flex: 1 1 15%;
+    width: 200px;
+    margin: 40px auto 100px auto;
+    text-align: center;
+}
+
 .show-more-btn:hover {
     width: 210px;
     cursor: pointer;
     background-color: #FFFFFF;
 }
 
-.gallery_block img{
-    flex: 0 0 20%;
-    margin: 5px
-
+.gallery-block__item{
+    flex: 0 0 24%;
+    margin: 5px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 280px;
+    height: 280px;
 }
 
-.gallery_block img:hover {
+.gallery-block__item img{
+    object-fit: cover;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+
+.gallery-block__item:hover {
     transform: scale(1.05);
     border-radius: 2px;
 }

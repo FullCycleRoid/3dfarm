@@ -15,7 +15,14 @@
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    margin:0;
+    padding:0;
 }
 
 body {
@@ -84,11 +91,54 @@ p {
 .title {
     font-size: 3em;
     flex: 1 0 60%;
-
 }
 
 .subtitle {
     flex: 1 0 40%;
     font-size: 1.1em;
     padding: 5px;
+}
+
+.instagram-block,
+.tiktok-block {
+    position: fixed;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    z-index: 900;
+}
+
+.instagram-block {
+    left: 0;
+    top: 50%;
+}
+
+.tiktok-block {
+    right: 0;
+    top: 50%;
+    z-index: 900;
+}
+
+.instagram-white,
+.tiktok-white {
+    font-size: 2em;
+    text-decoration: none;
+    z-index: 900;
+    color:#ffffff
+}
+
+.instagram-dark,
+.tiktok-dark{
+    font-size: 2em;
+    text-decoration: none;
+    z-index: 900;
+    color:#000000
+}
+
+.instagram:hover,
+.tiktok:hover     {
+    color: #474646;
+}
+
+.hide_element {
+    display: none;
 }

@@ -11,6 +11,7 @@ import img9 from "../images/gallery/img9.jpg"
 import img10 from "../images/gallery/img10.jpg"
 import img11 from "../images/gallery/img11.jpg"
 import img12 from "../images/gallery/img12.jpg"
+import img13 from "../images/gallery/img13.jpg"
 
 
 export default class Gallery extends React.Component {
@@ -42,18 +43,42 @@ export default class Gallery extends React.Component {
                    <div className="gallery-control-btn">+  сканирование</div>
                 </div>
                 <div className={this.state.visible ? 'gallery_block': 'gallery_block hide'} >
-                    <img src={img1} alt=""/>
-                    <img src={img2} alt=""/>
-                    <img src={img3} alt=""/>
-                    <img src={img4} alt=""/>
-                    <img src={img5} alt=""/>
-                    <img src={img6} alt=""/>
-                    <img src={img7} alt=""/>
-                    <img src={img8} alt=""/>
-                    <img src={img9} alt=""/>
-                    <img src={img10} alt=""/>
-                    <img src={img11} alt=""/>
-                    <img src={img12} alt=""/>
+                    <div className="gallery-block__item">
+                        <img src={img1} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img2} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img3} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img4} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img5} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img6} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img7} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img8} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img9} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img10} alt=""/>
+                    </div>
+                   <div className="gallery-block__item">
+                        <img src={img11} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img13} alt=""/>
+                    </div>
                 </div>
                 <div className="show-more-btn" onClick={this.showFullGallery}>смотреть больше</div>
             </div>

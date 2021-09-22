@@ -11,6 +11,7 @@ import Modeling from "./components/modeling";
 import Materials from "./components/materials";
 import Delivery from "./components/delivery";
 import Contacts from "./components/contacts";
+import Sidebar from "./components/sidebar";
 
 
 function App() {
@@ -26,10 +27,10 @@ function App() {
     <React.Fragment>
         <div className="container">
             <Header />
+            <Sidebar />
             <FirstScreen />
-            <Calculator />
             <About />
-
+            <Calculator />
             <Gallery />
             <Materials />
             <Modeling />

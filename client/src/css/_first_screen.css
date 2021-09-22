@@ -1,25 +1,126 @@
 .first-screen {
+    height: calc(100vh - 80px);
     margin: 60px 0;
     display: flex;
     justify-content: space-between;
 }
 
 .first-screen__title-block {
-    align-self: flex-end;
-
+    align-self: flex-start;
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
 }
 
 .first-screen__title-block__title {
-    font-family: "Bebas Neue"
+    border-top: 1px solid #000000;
+    font-size: 1.5em;
+    flex: 0 0 80%;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 50%;
+    z-index: 0;
 }
 
 .first-screen__title-block__subtitle {
-    width: 400px
+    width: 300px
+}
+
+.first-screen img {
+    width: 650px;
+}
+
+.first_logo {
+    position: relative;
+}
+
+.first_logo P{
+    position: absolute;
+    margin: 0 0 0 350px;
+    bottom: 27%;
+    width: 600px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.first_logo img {
+    position: absolute;
+    margin: 0 0 0 320px;
+    bottom: 35%;
+    animation-name: Appearance;
+    animation-duration: 3s;
+    filter: invert(1);
 }
 
 
-.first-screen img {
-    /*transform: scale(1.1);
-    */
-    width: 650px
+.instagram,
+.tiktok {
+  animation-name: Appearance;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-o-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.first-screen-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width:90px;
+    height: 90px;
+    border-radius: 80px;
+    border: 2px solid #ffffff;
+	animation: pulse 2s infinite;
+}
+
+.first-screen-btn img{
+  filter: invert(1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.90);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.first-screen-btn img{
+    width: 10px;
+    margin: 18px 0 0 38px;
+}
+
+.first_logo img {
+    padding: 40% 0;
 }

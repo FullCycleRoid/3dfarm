@@ -1,5 +1,8 @@
 .about {
-    margin: 120px 0 0 0
+    height: 50vh;
+    margin: 180px 0 0 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .first-block {
@@ -7,6 +10,19 @@
     flex-wrap: nowrap;
     margin: 90px auto;
 }
+
+.about-list li{
+    font-size: 1em;
+}
+.about-list {
+    margin: 50px 0 0 0;
+}
+
+.about img {
+    width: 550px;
+    height: 450px;
+}
+
 
 .first-block img {
     flex: 1 0 50%
@@ -27,9 +43,12 @@
 }
 
 .about-list {
-    font-size: 1.5em;
+    margin: 60px 0 0 20px;
+    font-size: 1.2em;
 }
 
 .about-list li {
+    list-style: square;
     margin: 20px 0;
+    color: #4b4b4b;
 }

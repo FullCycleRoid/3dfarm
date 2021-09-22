@@ -1,9 +1,11 @@
 const path = require('path');
+const fs = require('fs');
 const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
 const sendMail = require("./mail");
-const fs = require("fs");
+const priceCalculation = require("./price-calculation");
+
 
 const PORT = process.env.PORT || 3100;
 const app = express();
@@ -20,29 +22,22 @@ var storage = multer.diskStorage({
   }
 })
 
+
 const upload = multer({ storage: storage});
 
 
-const directory = path.dirname("");
-const parent = path.resolve(directory, '..');
-const uploaddir = parent + (path.sep) + '3dfarm' + (path.sep) + 'uploads';
-// console.log(directory, "directory",
-//             parent, "parent",
-//             uploaddir, "upload dir")
-
-app.post("/form", upload.single("fileUpload"), async (req, res) => {
+app.post("/form", upload.any(), async (req, res) => {
   try {
-
     const subject = "Запрос "
     const name = req.body.name || "аноним";
     const email = req.body.email;
     const phone = req.body.phone;
     const comment = req.body.comment || "без комментариев";
     const checkbox = req.body.checkbox;
-    const file = req.file || "нет файла";
+    const files = req.files;
 
     if (req.body.email && req.body.phone) {
-        sendMail(name, email, subject, phone, checkbox,file, comment)
+        sendMail(name, email, subject, phone, checkbox,files, comment)
     } else {
       res.status(400).send({
         status: false,
@@ -53,6 +48,17 @@ app.post("/form", upload.single("fileUpload"), async (req, res) => {
       console.log(err)
     res.status(500).send(err);
   }
+});
+
+
+
+
+app.post("/calculator", upload.any(), async (req, res) => {
+  const files = req.files;
+
+  files.forEach(function(file) {
+    priceCalculation(file)
+  })
 });
 
 app.listen(PORT, () => {
