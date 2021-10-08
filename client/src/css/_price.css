@@ -2,6 +2,7 @@
     position: relative;
     height: 60vh;
     margin: 150px 0 0 0;
+     font-family: "Montserrat";
 }
 
 
@@ -16,6 +17,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.price .title_block .subtitle {
+    text-align: right;
 }
 
 .table-title,

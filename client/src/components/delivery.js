@@ -8,7 +8,7 @@ import img4 from "../images/delivery4.png"
 export default function Delivery() {
 
     return (
-        <div className="delivery">
+        <div className="delivery" id="delivery">
             <div className="title_block">
                 <h2 className="title"> Доставка</h2>
                 <h3 className="subtitle"></h3>

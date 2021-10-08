@@ -32,16 +32,16 @@ export default class Gallery extends React.Component {
 
     render() {
         return (
-            <div className="gallery">
+            <div className="gallery" id="gallery">
                 <div className="title_block">
                     <h2 className="title">Галерея</h2>
                 </div>
-                <div className="gallery-controls">
-                   <div className="gallery-control-btn">+  все</div>
-                   <div className="gallery-control-btn">+  печать</div>
-                   <div className="gallery-control-btn">+  моделирование</div>
-                   <div className="gallery-control-btn">+  сканирование</div>
-                </div>
+                {/*<div className="gallery-controls">*/}
+                {/*   <div className="gallery-control-btn">+  все</div>*/}
+                {/*   <div className="gallery-control-btn">+  печать</div>*/}
+                {/*   <div className="gallery-control-btn">+  моделирование</div>*/}
+                {/*   <div className="gallery-control-btn">+  сканирование</div>*/}
+                {/*</div>*/}
                 <div className={this.state.visible ? 'gallery_block': 'gallery_block hide'} >
                     <div className="gallery-block__item">
                         <img src={img1} alt=""/>

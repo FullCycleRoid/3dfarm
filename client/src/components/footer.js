@@ -3,7 +3,6 @@ import React from 'react';
 
 function Footer() {
     return (
-
         <div className="footer">
             <div className="container">
                 <div className="footer-block">
@@ -24,7 +23,6 @@ function Footer() {
                         <p>Дизайн : iulialukina.com</p>
                     </div>
                 </div>
-
             </div>
         </div>
     )

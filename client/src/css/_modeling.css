@@ -9,67 +9,110 @@
 .third-modeling-block,
 .four-modeling-block {
     display: flex;
+    position: relative;
+
+}
+
+.first-modeling-block::before {
+    border-left: 1px solid #747373;
+    content: '';
+    transform: rotate(90deg);
+    height: 550px;
+    width: 1px;
+    position: absolute;
+    top: -83.5%;
+    left: 23%
 }
 
 .first-modeling-block img {
-    flex: 1 0 50%
+    flex: 1 0 50%;
 }
 
 .first-modeling-text {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 0 0 20px
+    flex-direction: column;
+    margin: 10px 0 0 30px;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.modeling {
+    font-family: "Montserrat";
 }
 
 .first-modeling-text-title {
-    flex: 1 0 100%;
-    font-size: 2em;
+    flex: 1 0 25%;
+    font-size: 1.5em;
     font-weight: 600;
+    margin-top: 10px
 }
 
 .first-modeling-text-subtitle {
-    flex: 1 0 45%;
+    margin: 0 20px 30px 0
 }
 
 
 .second-modeling-block {
-    margin: 50px 0 50px 0
+    margin: 80px 0 50px 0
 }
 
 .second-modeling-block img {
-    margin: 0 0 0 25%;
-    flex: 1 0 25%
+    flex: 1 0 20%;
+    width: 600px;
+}
+
+.second-modeling-block::before {
+    border-left: 1px solid #747373;
+    content: '';
+    transform: rotate(90deg);
+    height: 580px;
+    width: 1px;
+    position: absolute;
+    top: -72.5%;
+    right: 24%
 }
 
 .second-block-text {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 0 0 20px
+    margin: 10px 0 0 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+
 }
 
 .second-block-text-title {
-    flex: 1 0 100%;
-    font-size: 2em;
+    flex: 1 0 25%;
+    font-size: 1.5em;
     font-weight: 600;
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
 .second-block-text-subtitle {
-    flex: 1 0 45%;
+    margin-bottom: 40px;
 }
-
-
 
 .third-modeling-block {
-    margin: 50px 0 50px 0;
+    margin: 80px 0 50px 0;
     justify-content: flex-start;
-
 }
 
+.third-modeling-block::before {
+        border-left: 1px solid #747373;
+        content: '';
+        transform: rotate(90deg);
+        height: 580px;
+        width: 1px;
+        position: absolute;
+        top: -95%;
+        left: 24%
+    }
+
 .third-modeling-block img {
-    margin: 0 50% 0 0;
-    flex: 1 0 25%
+    width: 600px;
 }
 
 .third-block-text {
@@ -79,40 +122,56 @@
 }
 
 .third-block-text-title {
-    flex: 1 0 100%;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
+    width: 300px;
+    margin: 10px 0 0 0;
 }
 
 .third-block-text-subtitle {
-    flex: 1 0 25%;
+    font-size: 0.8em ;
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
-
 .four-modeling-block {
-    margin: 50px 0 50px 0;
-    justify-content: flex-start;
+    margin: 80px 0 0 0;
+}
 
+.four-modeling-block::before {
+    border-left: 1px solid #747373;
+    content: '';
+    transform: rotate(90deg);
+    height: 580px;
+    width: 1px;
+    position: absolute;
+    top: -81%;
+    right: 24%
 }
 
 .four-modeling-block img {
-    margin: 0 0 0 25%;
     flex: 1 0 50%
 }
 
 .four-block-text {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     margin: 0 0 0 20px
 }
 
 .four-block-text-title {
-    flex: 1 0 100%;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 .four-block-text-subtitle {
-    flex: 1 0 25%;
+    flex: 1 0 20%;
+    margin: 10px 0 0 50px;
+    font-size: 0.8em;
+    font-weight: 500;
 }
 

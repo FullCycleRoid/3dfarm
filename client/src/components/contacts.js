@@ -4,7 +4,7 @@ import Form from "./form"
 export default class Contacts extends React.Component {
     render() {
         return (
-            <div className="contacts">
+            <div className="contacts" id="contacts">
                 <div className="title_block">
                     <h2 className="title">Написать нам</h2>
                 </div>

@@ -12,12 +12,14 @@
 @import "css/_delivery.css";
 @import "css/_footer.css";
 @import "css/_contscts.css";
+@import "css/_media.css";
 
 
 * {
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -49,7 +51,6 @@ h1, h2, h3, h4, h5 , h6 {
   color: #24242a;
   text-transform: uppercase;
   font-weight: 600;
-
 }
 
 h1 {
@@ -60,8 +61,7 @@ h1 {
 h2 {
   font-size: 3em;
   font-weight: 700;
-  font-family: "Bebas Neue";
-
+  font-family: "Montserrat";
 }
 
 h3 {
@@ -85,7 +85,7 @@ p {
 .title_block {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #000000;
+    border-top: 2px solid #000000;
 }
 
 .title {
@@ -96,11 +96,12 @@ p {
 .subtitle {
     flex: 1 0 40%;
     font-size: 1.1em;
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .instagram-block,
 .tiktok-block {
+    font-family: "Montserrat";
     position: fixed;
     cursor: pointer;
     transform: rotate(-90deg);
@@ -141,4 +142,30 @@ p {
 
 .hide_element {
     display: none;
+}
+
+.red {
+    color: red;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.message {
+  overflow: hidden;
+}
+
+.balon1 {
+  float: right;
+  background: #35cce6;
+  border-radius: 10px;
+}
+
+.balon2 {
+  float: left;
+  background: #f4f7f9;
+  border-radius: 10px;
 }

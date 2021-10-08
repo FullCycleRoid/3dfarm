@@ -15,7 +15,6 @@
     top: 10px;
     right: 0;
     border-radius: 30px;
-
     padding: 50px;
 }
 
@@ -26,6 +25,7 @@
 .contacts {
     position: relative;
     color: #878787;
+    font-family: "monserat";
 }
 
 .contacts-form form {

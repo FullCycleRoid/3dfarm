@@ -3,14 +3,57 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "monserat";
 }
 
 .calculator-footer-block__btn{
     width:80px;
     height: 80px;
     border-radius: 80px;
-    border: 1px solid #000000;
-    transform: rotate(90deg)
+    border: 2px solid #ffffff;
+	animation: pulse 2s infinite;
+    position: relative;
+    margin: 0 20px 0 0
+}
+
+.calculator-info {
+    flex: 1 0 100%;
+    display: block;
+    font-size: 0.9em;
+}
+
+.upload-file::-webkit-file-upload-button{
+width: 300px;
+border: none;
+border-bottom: 2px solid #848484;
+overflow: hidden;
+}
+
+#upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.first-card label {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    width: 400px;
+    border: none;
+    border-bottom: 2px solid #848484;
+    color: #848484;
+}
+
+.first-card label img {
+margin-bottom: 5px;
+}
+
+.calculator-footer-block__btn img {
+    position: absolute;
+    left: 19px
 }
 
 .first-card {
@@ -18,43 +61,116 @@
     justify-content: space-between;
     margin: 0 20%;
     font-size: 1.5em;
-      align-items: center;
+    align-items: center;
+}
+
+.second-card-block {
+    position: relative;
+    top: -140px;
+    left: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.second-card-block p {
+    flex: 1 0 70%;
+    margin: -10px 20% 20px 12%;
+    text-align: center;
+}
+
+.second-card {
+    font-size: 1em;
+    height: 100px;
+    position: relative;
+}
+
+.calculator-form {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.calculator-formErrors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 0.7em;
+    width: 410px;
+    margin: 20px 0 0 66px
+}
+
+.calculator-form input {
+    height: 35px;
+    width: 300px;
+    border-radius: 5px;
+    padding-left: 10px;
 }
 
 
-.second-card {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5em;
-    height: 100px;
-    margin: 10% auto;
+.calculator-form input:first-child {
+    margin-right: 110px;
 }
 
 .file-settings {
-    flex: 1 0 50%;
+    margin: 0 50px 0 21%;
+    width: 30%;
+}
+
+.file-settings li:nth-child(4),
+.file-settings li:nth-child(5) {
+    padding-left: 67px;
+}
+
+.file-settings li:nth-child(1),
+.price-list li:nth-child(1) {
+    font-size: 1.2em;
+}
+
+.price-list li:nth-child(7) {
+    margin-top: 10px;
+}
+
+.form-block {
+    margin-left: 100px;
 }
 
 .price-list {
-    flex: 1 0 50%;
+    margin: 0 50px 0 0;
+    flex: 0 0 40%;
 }
 
 .second-card-calculator-btn {
-    padding: 5px;
+    padding: 10px 10px 35px 10px;
     font-size: 1.5em;
     border: 1px solid #000000;
     border-radius: 30px;
-    flex: 1 0 100%;
+    margin: 0 150px 0 0;
+    height: 60px;
+    position: absolute;
+    bottom: -100px;
+    right: -250px;
+}
 
+.form-sent {
+    text-align: center;
+}
+
+.form-block form {
+    position: relative;
+}
+
+.second-card-calculator-btn:hover {
+    background-color: #86ff6a;
 }
 
 .first-card-calculator-btn {
     display: block;
-    padding: 5px;
-    font-size: 1.5em;
+    padding: 7px;
+    font-size: 1.2em;
     border: 1px solid #000000;
     border-radius: 30px;
+    cursor: pointer;
 }
-
 
 .calculator-footer-block {
     display: flex;
@@ -73,12 +189,12 @@
 }
 
 .card {
-    width: 1180px;
+    width: 100%;
     height: 500px;
     background-color: #FFFFFF;
     border-radius: 50px;
     border: 1px solid #FFFFFF;
-    margin: 60px auto 0 auto;
+    margin: 60px 0 0 0;
     display: flex;
     justify-content: center;
     flex-direction: column;

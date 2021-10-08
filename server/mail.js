@@ -1,69 +1,13 @@
-// const nodemailer = require('nodemailer');
-// const mailGun = require('nodemailer-mailgun-transport');
-
-//
-//
-// const auth = {
-//         auth: {
-//             api_key: 'd17003e9018bc0751a8ebb620c0ae536-a3c55839-c88c5e63',
-//             domain: 'sandbox9ad8c4ce7ab94f649d09b745cc4811a2.mailgun.org'
-//         }
-//     };
-//
-// const transporter = nodemailer.createTransport(mailGun(auth));
-// const sendMail = (name, email, subject, phone, checkbox,files, comment) => {
-//
-//     let fileName,
-//         mailOptions,
-//         filePath;
-//
-//     console.log(name, email, subject, phone, files)
-//     if (files.length === 0) {
-//         mailOptions = {
-//             sender: name,
-//             from: email,
-//             to: 'feedmetal1989@gmail.com',
-//             subject: subject,
-//             text: comment,
-//             phone: phone
-//         }
-//     } else {
-//       files.forEach(function(file) {
-//            fileName = file.originalname
-//            filePath = file.path
-//
-//         mailOptions = {
-//             sender: name,
-//             from: email,
-//             to: 'feedmetal1989@gmail.com',
-//             subject: subject,
-//             text: comment,
-//             phone: phone,
-//             attachments: [{
-//                 filename: fileName,
-//                 content: fs.createReadStream(filePath)
-//             }]
-//         };
-//       })
-//     }
-//     console.log(mailOptions)
-//     transporter.sendMail(mailOptions)
-//         .then( res => { console.log("this is response", res)})
-//         .catch( err => {console.log("this is error", err)});
-// }
-//
-// module.exports = sendMail;
-
-
 const mailgun = require("mailgun-js");
+const config = require("./config")
 const fs = require("fs");
 const path = require("path");
-const mg = mailgun({apiKey: "d17003e9018bc0751a8ebb620c0ae536-a3c55839-c88c5e63", domain: "sandbox9ad8c4ce7ab94f649d09b745cc4811a2.mailgun.org"});
+const mg = mailgun({apiKey: config.mailgunApiKey, domain: config.mailgunDomain});
 
 
-function sendMail (name, email, subject, phone, checkbox,files, comment) {
+function sendMail (name, email, subject, phone, checkbox,files, comment, fileCalculationData) {
 
-    const messageBody = `
+    let messageBody = `
         Имя: ${name}
         Телефон: ${phone}
         Перезвонить: ${checkbox}
@@ -71,7 +15,25 @@ function sendMail (name, email, subject, phone, checkbox,files, comment) {
         Сообщение: ${comment}
     `
 
-    const data = {
+    if (fileCalculationData) {
+        let parseData = JSON.parse(fileCalculationData)
+        messageBody += `
+            обьем ${parseData["volume"]}
+            x ${parseData["x"]}
+            y ${parseData["y"]}
+            z ${parseData["z"]}
+            вес ${parseData["weight"]}
+            
+            PLA ${parseData["basicFdm"]}
+            FORMAX ${parseData["forMax"]}
+            фотополимер ${parseData["basicPhoto"]}
+            выжигаемый ${parseData["burnPhoto"]}
+            нейлон ${parseData["nylon"]}
+        `
+    }
+
+    console.log(files)
+    let data = {
 	    from: email,
 	    to: 'feedmetal1989@gmail.com',
 	    subject: subject,

@@ -15,13 +15,6 @@ import Sidebar from "./components/sidebar";
 
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
 
   return (
     <React.Fragment>
@@ -39,6 +32,7 @@ function App() {
             <Contacts />
         </div>
         <Footer />
+
     </React.Fragment>
   );
 }

@@ -16,7 +16,6 @@ export default class Form extends React.Component {
             checkbox: "off",
             formErrors: {
                 email: '',
-                password: '',
                 phone: '',
                 comment: '',
             },
@@ -28,10 +27,10 @@ export default class Form extends React.Component {
     }
 
     onFileHandler = (e) => {
-        this.setState({
-          fileUpload: e.target.files[0]
-        })
-
+        const value = e.target.files[0]
+        this.setState({ "fileUpload": value },
+        () => { this.validateField("fileUpload", value) }
+        )
     }
 
     errorClass(error) {
@@ -58,12 +57,13 @@ export default class Form extends React.Component {
             default:
               break;
       }
-      this.setState(      {formErrors:
-                                fieldValidationErrors,
-                                emailValid: emailValid,
-                                phoneValid: phoneValid
-           }, this.validateForm);
+      this.setState(
+          {formErrors: fieldValidationErrors,
+                emailValid: emailValid,
+                phoneValid: phoneValid
+      }, this.validateForm);
     }
+
     validateForm() {
       this.setState({
           formValid: this.state.emailValid && this.state.phoneValid
@@ -71,18 +71,11 @@ export default class Form extends React.Component {
     }
 
     onFormHandler = (e) => {
-        if (e.target.files) {
-            const value = e.target.files[0]
-            this.setState({ "fileUpload": value },
-            () => { this.validateField("fileUpload", value) }
-            )
-        } else {
             const name = e.target.name
             const value = e.target.value
             this.setState({ [name]: value },
             () => { this.validateField(name, value) }
             )
-        }
     }
 
     handleSubmit = (e) => {
@@ -130,12 +123,14 @@ export default class Form extends React.Component {
                                   placeholder={"телефон"}
                                   onChange={this.onFormHandler}
                            />
+
                            <input name="checkbox"
                                   type="checkbox"
                                   className="phone-checkbox"
                                   onChange={this.onFormHandler}
                            />
-                    <label htmlFor="Checkbox">перезвонить мне</label>
+
+                            <label htmlFor="Checkbox">перезвонить мне</label>
                     </div>
                     <input type="text"
                            name="name"
@@ -145,7 +140,7 @@ export default class Form extends React.Component {
                     <input type="file"
                            name="fileUpload"
                            placeholder={"Выбирите файл"}
-                           onChange={ e => {this.onFileHandler(e); this.onFormHandler(e)}}
+                           onChange={ e => {this.onFileHandler(e)}}
 
                     />
                     <textarea rows="10"

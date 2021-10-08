@@ -5,10 +5,10 @@ import React from "react";
 export default function Price() {
 
     return (
-        <div className="price">
+        <div className="price" id="price">
             <div className="title_block">
                 <h2 className="title">Цены</h2>
-                <h3 className="subtitle">Серийные заказы выполним в кротчайшие сроки</h3>
+                <h3 className="subtitle">Серийные заказы в кротчайшие сроки</h3>
             </div>
 
             <div className="table">

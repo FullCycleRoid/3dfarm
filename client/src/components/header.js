@@ -2,7 +2,6 @@ import React from 'react';
 import logo from "../images/logo.png";
 
 class Header extends React.Component {
-
     constructor() {
         super();
         this.state = {
@@ -22,9 +21,7 @@ class Header extends React.Component {
       })
     }
 
-
     render() {
-
         const {height, currentPosition} = this.state;
 
         return (
@@ -37,14 +34,14 @@ class Header extends React.Component {
                     </div>
 
                     <div className={currentPosition < height+600? "navbar bg-white" : "navbar bg-dark"}>
-                        <a href="" >калькулятор</a>
-                        <a href="" >галерея</a>
-                        <a href="" >о нас</a>
-                        <a href="" >материалы</a>
-                        <a href="" >моделирование</a>
-                        <a href="" >цены</a>
-                        <a href="" >доставка</a>
-                        <a href="" >контакты</a>
+                        <a href="#calculator" >калькулятор</a>
+                        <a href="#about" >о нас</a>
+                        <a href="#gallery" >галерея</a>
+                        <a href="#materials" >материалы</a>
+                        <a href="#modeling" >моделирование</a>
+                        <a href="#price" >цены</a>
+                        <a href="#delivery" >доставка</a>
+                        <a href="#contacts" >контакты</a>
                     </div>
                 </div>
             </header>

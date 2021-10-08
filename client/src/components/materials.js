@@ -69,7 +69,7 @@ export default class Materials extends React.Component {
         }
     render() {
      return (
-            <div className="materials">
+            <div className="materials" id="materials">
                 <div className="title_block">
                     <h2 className="title">Материалы</h2>
                     <h3 className="subtitle">Напишите нам, чтобы узнать возможности и характеристики конкретного матриала.

@@ -3,6 +3,7 @@
     margin: 180px 0 0 0;
     display: flex;
     justify-content: space-between;
+    font-family: "monserat";
 }
 
 .first-block {
@@ -21,8 +22,9 @@
 .about img {
     width: 550px;
     height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
 }
-
 
 .first-block img {
     flex: 1 0 50%
@@ -39,7 +41,7 @@
 }
 
 .second-block img {
-    margin: 0 0 25px 0
+    margin: 0 0 25px 0;
 }
 
 .about-list {
@@ -48,7 +50,7 @@
 }
 
 .about-list li {
-    list-style: square;
-    margin: 20px 0;
+    list-style: circle;
+    margin: 5px 0 0 0;
     color: #4b4b4b;
 }

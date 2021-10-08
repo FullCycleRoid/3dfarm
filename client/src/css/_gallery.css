@@ -1,5 +1,10 @@
 .gallery {
-    margin: 50px auto
+    margin: 50px auto;
+    font-family: "Montserrat";
+}
+
+.gallery .title_block {
+    margin-bottom: 80px;
 }
 
 .gallery-controls {
