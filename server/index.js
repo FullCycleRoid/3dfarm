@@ -32,16 +32,13 @@ const upload = multer({ storage: storage});
 
 app.post("/contact-form", upload.any(), async (req, res) => {
   try {
-    let subject = "Запрос ",
-        name = req.body.name || "аноним",
-        email = req.body.email,
-        phone = req.body.phone,
+    let name = req.body.name || "аноним",
         comment = req.body.comment || "без комментариев",
-        checkbox = req.body.checkbox,
-        files = req.files
+        stlFileData = null,
+        file = Array.from(req.files)[0]
 
 
-    sendMail(name, email, subject, phone, checkbox, req.files, comment)
+    sendMail(name, req.body.email, req.body.phone, req.body.isCallbackCheckbox, file, comment, stlFileData)
 
   } catch (err) {
     console.log(err)
@@ -52,16 +49,13 @@ app.post("/contact-form", upload.any(), async (req, res) => {
 app.post("/calculator-form", upload.any(), async (req, res) => {
 
   try {
-    let subject = "Запрос из калькулятора",
-        email = req.body.email,
-        name = "аноним",
+    let name = "аноним",
         comment = "comment",
-        phone = req.body.phone,
-        stlFilePriceData = req.body.stlFilePriceData,
-        files = req.files,
-        checkbox = "";
-    console.log(fileCalculationData, "object")
-    sendMail(name, email, subject, phone, checkbox, files, comment, stlFilePriceData)
+        stlFileData = req.body.stlFileData,
+        file = Array.from(req.files)[0]
+
+    console.log(stlFileData, "object")
+    sendMail(name, req.body.email, req.body.phone, req.body.isCallbackCheckbox, file, comment, stlFileData)
 
   } catch (err) {
     console.log(err)
@@ -76,11 +70,11 @@ function extValidator(filename) {
 }
 
 app.post("/calculator", upload.any(), async (req, res) => {
-  const file = req.files[0];
+  const file = Array.from(req.files)[0];
   console.log(file)
   if (extValidator(file.filename)) {
-    let printedFileData = stlHandler(file)
-    res.status(200).send(printedFileData)
+    let stlFilePriceData = stlHandler(file)
+    res.status(200).send(stlFilePriceData)
   } else {
     res.status(500).send("неверное расширение файла. Пожалуйста загрузите файл в формате STL")
   }

@@ -5,8 +5,10 @@ const path = require("path");
 const mg = mailgun({apiKey: config.mailgunApiKey, domain: config.mailgunDomain});
 
 
+let messageBody
+
 function createMessageTextBody(name, checkbox, comment, stlFilePriceData) {
-    let messageBody = ` Имя: ${name}
+    messageBody = `     Имя: ${name}
                         Телефон: ${phone}
                         Перезвонить: ${checkbox}
                         
@@ -27,31 +29,30 @@ function createMessageTextBody(name, checkbox, comment, stlFilePriceData) {
         выжигаемый ${jsonStlFileData["burnPhoto"]}
         нейлон ${jsonStlFileData["nylon"]}
         `
-    return messageBody
+        return messageBody
+    }
 }
 
 
-// name, email, subject, phone, checkbox, files, comment, stlFilePriceData
-function sendMail (...args) {
+function sendMail(name, email, phone, checkbox, file, comment, stlFileData) {
 
 
-    messageBody = createMessageTextBody(args.name, args.checkbox, args.comment, args.stlFilePriceData)
+    let subject = phone + name
+
+    messageBody = createMessageTextBody(name, checkbox, comment, stlFileData)
+
     let mail = {
-	    from: args.email,
-	    to: 'feedmetal1989@gmail.com',
-	    subject: args.subject,
-	    text: messageBody
+        from: email,
+        to: 'feedmetal1989@gmail.com',
+        subject: subject,
+        text: messageBody
     };
 
 
-    console.log(files)
-
-    if (files.length > 0) {
-        files.forEach(function (file) {
-            let fileName = file.originalname
-            // let filePath = file.path
-            mail["attachments"] = path.join("./uploads", fileName);
-        })
+    console.log(file)
+    if (file) {
+        let fileName = file.originalname
+        mail["attachments"] = path.join("./uploads", fileName);
     }
 
     console.log(mail, "mail")
@@ -63,5 +64,6 @@ function sendMail (...args) {
         }
     });
 }
+
 
 module.exports = sendMail

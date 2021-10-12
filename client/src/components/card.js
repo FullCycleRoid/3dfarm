@@ -15,7 +15,7 @@ export default class Card extends React.Component{
             sentForm: false,
             viewer: null,
             status: null,
-            fileData: null,
+            stlFileData: null,
             filename: "Выберите STL файл",
             emailValid: false,
             phoneValid: false,
@@ -69,7 +69,7 @@ export default class Card extends React.Component{
 
         const form = new FormData();
         form.append('fileUpload', this.state.uploadFile)
-        form.append('fileCalculationData', JSON.stringify(this.state.stlFileData))
+        form.append('stlFileData', JSON.stringify(this.state.stlFileData))
         form.append("phone", this.state.phone);
         form.append("email", this.state.email);
 

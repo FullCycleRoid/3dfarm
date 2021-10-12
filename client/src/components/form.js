@@ -13,7 +13,7 @@ export default class Form extends React.Component {
             phone: '+7 ',
             email: '',
             comment: '',
-            checkbox: "off",
+            isCallbackCheckbox: false,
             formErrors: {
                 email: '',
                 phone: '',
@@ -88,7 +88,7 @@ export default class Form extends React.Component {
         form.append("phone", this.state.phone);
         form.append("email", this.state.email);
         form.append("comment", this.state.comment);
-        form.append("checkbox", this.state.checkbox);
+        form.append("isCallbackCheckbox", this.state.isCallbackCheckbox);
 
         axios({method: "POST",
                url: "http://localhost:3100/form",
@@ -124,13 +124,13 @@ export default class Form extends React.Component {
                                   onChange={this.onFormHandler}
                            />
 
-                           <input name="checkbox"
+                           <input name="isCallbackCheckbox"
                                   type="checkbox"
                                   className="phone-checkbox"
                                   onChange={this.onFormHandler}
                            />
 
-                            <label htmlFor="Checkbox">перезвонить мне</label>
+                            <label htmlFor="isCallbackCheckbox">перезвонить мне</label>
                     </div>
                     <input type="text"
                            name="name"
