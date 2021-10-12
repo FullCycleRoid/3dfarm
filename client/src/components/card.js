@@ -32,7 +32,7 @@ export default class Card extends React.Component{
         this.toggleFile = this.toggleFile.bind(this)
     }
 
-    changeCard() {
+    sendUploadFile() {
         const formData = new FormData();
 		formData.append('calculatorFile', this.state.uploadFile);
 		fetch(
@@ -64,14 +64,12 @@ export default class Card extends React.Component{
     }
 
 
-    handleSubmit = (e) => {
+    handleSecondCardForm = (e) => {
         e.preventDefault();
 
-        const file =  this.state.uploadFile
-        const fileCalculationData =  this.state.fileData
         const form = new FormData();
-        form.append('fileUpload', file)
-        form.append('fileCalculationData', JSON.stringify(fileCalculationData))
+        form.append('fileUpload', this.state.uploadFile)
+        form.append('fileCalculationData', JSON.stringify(this.state.stlFileData))
         form.append("phone", this.state.phone);
         form.append("email", this.state.email);
 
@@ -130,11 +128,9 @@ export default class Card extends React.Component{
       });
     }
 
-    onFormHandler = (e) => {
-            const name = e.target.name
-            const value = e.target.value
-            this.setState({ [name]: value },
-            () => { this.validateField(name, value) }
+    onFormHandler = name => event => {
+            this.setState({ [name]: event.target.value },
+            () => { this.validateField(name, event.target.value) }
             )
     }
 
@@ -144,17 +140,17 @@ export default class Card extends React.Component{
         return (
             <div className="first-card">
                 <p>{warning}</p>
-                <label className="common-label" htmlFor="upload-photo">
-                    <input id="upload-photo" type="file" name="calculator-file" onChange={this.toggleFile} className="upload-file"/>
+                <label className="common-label" htmlFor="upload-stl">
+                    <input id="upload-stl" type="file" name="calculator-file" onChange={this.toggleFile("stlFile")} className="upload-file"/>
                     {this.state.filename}
                     <img src={clip} alt=""/>
                 </label>
-                <input type="submit" placeholder="Рассчитать" onClick={this.changeCard} className="first-card-calculator-btn"/>
+                <input type="submit" placeholder="Рассчитать" onClick={this.sendUploadFile} className="first-card-calculator-btn"/>
             </div>
         )
     }
 
-    lastCard() {
+    thirdCard() {
         return (
                 <div className="form-sent">
                     <h4>Спасибо!! Заявка принята</h4>
@@ -163,7 +159,6 @@ export default class Card extends React.Component{
     }
 
     secondCard(fileData) {
-
         return (
             <div className="second-card">
                 <div className="second-card-block">
@@ -192,7 +187,7 @@ export default class Card extends React.Component{
 
                     <div className="form-block">
                         <form method="post"
-                              onSubmit={this.handleSubmit}
+                              onSubmit={this.handleSecondCardForm}
                               className="calculator-form"
                         >
                             <input type="text"
@@ -233,7 +228,7 @@ export default class Card extends React.Component{
       if (!switchCard ) {
           renderCard = this.firstCard()
       }  else if (switchCard && status === 200 && sentForm) {
-          renderCard = this.lastCard()
+          renderCard = this.thirdCard()
       } else {
           if (fileData === null) {
               renderCard =  "loading..."

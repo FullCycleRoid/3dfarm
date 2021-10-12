@@ -4,7 +4,7 @@ let path = require('path'),
       cors = require("cors"),
       multer = require("multer"),
       sendMail = require("./mail"),
-      stlHandler = require("./price-calculation"),
+      stlHandler = require("./calculator"),
       axios = require('axios'),
       config = require("./config")
 
@@ -30,7 +30,7 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage});
 
 
-app.post("/form", upload.any(), async (req, res) => {
+app.post("/contact-form", upload.any(), async (req, res) => {
   try {
     let subject = "Запрос ",
         name = req.body.name || "аноним",
@@ -38,10 +38,10 @@ app.post("/form", upload.any(), async (req, res) => {
         phone = req.body.phone,
         comment = req.body.comment || "без комментариев",
         checkbox = req.body.checkbox,
-        files = req.files,
-        fileCalculationData = {}
+        files = req.files
 
-    sendMail(name, email, subject, phone, checkbox,files, comment, fileCalculationData)
+
+    sendMail(name, email, subject, phone, checkbox, req.files, comment)
 
   } catch (err) {
     console.log(err)
@@ -50,17 +50,18 @@ app.post("/form", upload.any(), async (req, res) => {
 });
 
 app.post("/calculator-form", upload.any(), async (req, res) => {
+
   try {
     let subject = "Запрос из калькулятора",
         email = req.body.email,
         name = "аноним",
         comment = "comment",
         phone = req.body.phone,
-        fileCalculationData = req.body.fileCalculationData,
+        stlFilePriceData = req.body.stlFilePriceData,
         files = req.files,
         checkbox = "";
     console.log(fileCalculationData, "object")
-    sendMail(name, email, subject, phone, checkbox, files, comment, fileCalculationData)
+    sendMail(name, email, subject, phone, checkbox, files, comment, stlFilePriceData)
 
   } catch (err) {
     console.log(err)

@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f226728.chunk.css",
+    "main.js": "/static/js/main.a730a7f5.chunk.js",
+    "main.js.map": "/static/js/main.a730a7f5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a9f80a17.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a9f80a17.js.map",
+    "static/js/2.3c9d2ff0.chunk.js": "/static/js/2.3c9d2ff0.chunk.js",
+    "static/js/2.3c9d2ff0.chunk.js.map": "/static/js/2.3c9d2ff0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.5f226728.chunk.css.map": "/static/css/main.5f226728.chunk.css.map",
+    "static/js/2.3c9d2ff0.chunk.js.LICENSE.txt": "/static/js/2.3c9d2ff0.chunk.js.LICENSE.txt",
+    "static/media/about1.da116f29.png": "/static/media/about1.da116f29.png",
+    "static/media/about2.962d1ce9.png": "/static/media/about2.962d1ce9.png",
+    "static/media/first-screen.e7a70fd2.png": "/static/media/first-screen.e7a70fd2.png",
+    "static/media/img1.8d6639c5.png": "/static/media/img1.8d6639c5.png",
+    "static/media/img10.beaddc82.jpg": "/static/media/img10.beaddc82.jpg",
+    "static/media/img11.7fcf3508.jpg": "/static/media/img11.7fcf3508.jpg",
+    "static/media/img12.59da99c3.jpg": "/static/media/img12.59da99c3.jpg",
+    "static/media/img2.33d27450.png": "/static/media/img2.33d27450.png",
+    "static/media/img3.13959f4c.png": "/static/media/img3.13959f4c.png",
+    "static/media/img4.eff3d91a.png": "/static/media/img4.eff3d91a.png",
+    "static/media/img5.dcdb005f.png": "/static/media/img5.dcdb005f.png",
+    "static/media/img6.6ef1a3c1.png": "/static/media/img6.6ef1a3c1.png",
+    "static/media/img7.26633ad5.png": "/static/media/img7.26633ad5.png",
+    "static/media/img8.1ef0b566.png": "/static/media/img8.1ef0b566.png",
+    "static/media/img9.a83882e7.jpg": "/static/media/img9.a83882e7.jpg",
+    "static/media/modeling1.1e2c5ed8.png": "/static/media/modeling1.1e2c5ed8.png",
+    "static/media/modeling2.3d626c6b.png": "/static/media/modeling2.3d626c6b.png",
+    "static/media/modeling3.7c3c7d98.png": "/static/media/modeling3.7c3c7d98.png",
+    "static/media/modeling4.2a0478da.png": "/static/media/modeling4.2a0478da.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9f80a17.js",
+    "static/js/2.3c9d2ff0.chunk.js",
+    "static/css/main.5f226728.chunk.css",
+    "static/js/main.a730a7f5.chunk.js"
+  ]
+}

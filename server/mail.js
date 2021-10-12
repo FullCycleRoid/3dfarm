@@ -5,52 +5,57 @@ const path = require("path");
 const mg = mailgun({apiKey: config.mailgunApiKey, domain: config.mailgunDomain});
 
 
-function sendMail (name, email, subject, phone, checkbox,files, comment, fileCalculationData) {
+function createMessageTextBody(name, checkbox, comment, stlFilePriceData) {
+    let messageBody = ` Имя: ${name}
+                        Телефон: ${phone}
+                        Перезвонить: ${checkbox}
+                        
+                        Сообщение: ${comment} `
 
-    let messageBody = `
-        Имя: ${name}
-        Телефон: ${phone}
-        Перезвонить: ${checkbox}
-        
-        Сообщение: ${comment}
-    `
-
-    if (fileCalculationData) {
-        let parseData = JSON.parse(fileCalculationData)
+    if (stlFilePriceData) {
+        let jsonStlFileData = JSON.parse(stlFilePriceData)
         messageBody += `
-            обьем ${parseData["volume"]}
-            x ${parseData["x"]}
-            y ${parseData["y"]}
-            z ${parseData["z"]}
-            вес ${parseData["weight"]}
-            
-            PLA ${parseData["basicFdm"]}
-            FORMAX ${parseData["forMax"]}
-            фотополимер ${parseData["basicPhoto"]}
-            выжигаемый ${parseData["burnPhoto"]}
-            нейлон ${parseData["nylon"]}
+        обьем ${jsonStlFileData["volume"]}
+        x ${jsonStlFileData["x"]}
+        y ${jsonStlFileData["y"]}
+        z ${jsonStlFileData["z"]}
+        вес ${jsonStlFileData["weight"]}
+        
+        PLA ${jsonStlFileData["basicFdm"]}
+        FORMAX ${jsonStlFileData["forMax"]}
+        фотополимер ${jsonStlFileData["basicPhoto"]}
+        выжигаемый ${jsonStlFileData["burnPhoto"]}
+        нейлон ${jsonStlFileData["nylon"]}
         `
-    }
+    return messageBody
+}
 
-    console.log(files)
-    let data = {
-	    from: email,
+
+// name, email, subject, phone, checkbox, files, comment, stlFilePriceData
+function sendMail (...args) {
+
+
+    messageBody = createMessageTextBody(args.name, args.checkbox, args.comment, args.stlFilePriceData)
+    let mail = {
+	    from: args.email,
 	    to: 'feedmetal1989@gmail.com',
-	    subject: subject,
+	    subject: args.subject,
 	    text: messageBody
     };
+
+
+    console.log(files)
 
     if (files.length > 0) {
         files.forEach(function (file) {
             let fileName = file.originalname
             // let filePath = file.path
-            data["attachments"] = path.join("./uploads", fileName);
+            mail["attachments"] = path.join("./uploads", fileName);
         })
     }
 
-    console.log(data, "data")
-
-    mg.messages().send(data, function (error, body) {
+    console.log(mail, "mail")
+    mg.messages().send(mail, function (error, body) {
         try {
             console.log(body);
         } catch (e) {
