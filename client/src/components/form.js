@@ -9,6 +9,7 @@ export default class Form extends React.Component {
         super();
         this.state = {
             fileUpload: null,
+            responseSuccess: false,
             name: '',
             phone: '+7 ',
             email: '',
@@ -91,21 +92,24 @@ export default class Form extends React.Component {
         form.append("isCallbackCheckbox", this.state.isCallbackCheckbox);
 
         axios({method: "POST",
-               url: "http://localhost:3100/form",
+               url: "http://localhost:3100/contact-form",
                data: form,
               })
             .then((res) => {
                  console.log(res.data.message);
+
               })
             .catch((err)=> {
                 console.log(err);
-
             });
+             this.setState({
+                responseSuccess:true
+            })
         }
 
-    render() {
+    contactForm() {
         return (
-            <div className="contacts-form">
+              <div className="contacts-form">
                 <div className="">
                     <FormErrors formErrors={this.state.formErrors} />
                 </div>
@@ -152,6 +156,31 @@ export default class Form extends React.Component {
                     <input type="submit" disabled={!this.state.formValid} className="contact-btn"/>
                 </form>
             </div>
+            )
+    }
+
+    formAnswer() {
+        return (
+            <div className="contacts-form">
+                <h5 className="text-center">Скоро мы свяжемся с вами!</h5>
+            </div>
+        )
+    }
+
+    render() {
+        let { responseSuccess } = this.state
+        let card
+
+        if (responseSuccess) {
+           card = this.formAnswer()
+        } else {
+           card = this.contactForm()
+        }
+
+        return (
+            <>
+                {card}
+            </>
         )
     }
 

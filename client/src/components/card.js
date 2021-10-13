@@ -12,7 +12,8 @@ export default class Card extends React.Component{
             formSent: false,
             uploadFile: null,
             switchCard: false,
-            sentForm: false,
+            uploadFirstFormValid: false,
+            formWasSendSuccessful: false,
             viewer: null,
             status: null,
             stlFileData: null,
@@ -21,6 +22,7 @@ export default class Card extends React.Component{
             phoneValid: false,
             phone: '+7 ',
             email: '',
+            formValid: false,
             formErrors: {
                 email: '',
                 phone: '',
@@ -28,13 +30,13 @@ export default class Card extends React.Component{
 
         };
 
-        this.changeCard = this.changeCard.bind(this)
+        this.sendUploadFile = this.sendUploadFile.bind(this)
         this.toggleFile = this.toggleFile.bind(this)
     }
 
     sendUploadFile() {
         const formData = new FormData();
-		formData.append('calculatorFile', this.state.uploadFile);
+		formData.append('uploadFile', this.state.uploadFile);
 		fetch(
 			'http://localhost:3100/calculator',
 			{
@@ -49,10 +51,13 @@ export default class Card extends React.Component{
             return result.json()
         })
         .then( data => {
-           this.setState({fileData: data})
+           this.setState({
+               stlFileData: data,
+               uploadFirstFormValid: true
+           })
         })
         .catch((error) => {
-            console.error('Error:', error);
+            // console.error('Error:', error);
             this.setState({
                 status: 500
             })
@@ -78,23 +83,33 @@ export default class Card extends React.Component{
                data: form,
               })
             .then((res) => {
-                 console.log(res.data.message);
+                 // console.log(res.data.message);
+                 this.setState({
+                 formWasSendSuccessful: true
+                 })
+
               })
             .catch((err)=> {
-                console.log(err);
+                // console.log(err);
 
             });
 
-        this.setState({
-            sentForm: true
-        })
     }
+
+
+    extValidator(filename) {
+      const ext = filename.split(".").pop()
+      if (ext === "stl") this.setState( {uploadFirstFormValid: true})
+    }
+
 
     toggleFile(e) {
         this.setState({
             uploadFile: e.target.files[0],
             filename: e.target.files[0]["name"]
         })
+
+        this.extValidator(e.target.files[0]["name"])
 	};
 
     errorClass(error) {
@@ -103,15 +118,16 @@ export default class Card extends React.Component{
 
     validateField(fieldName, value) {
       let fieldValidationErrors = this.state.formErrors;
-      let emailValid = this.state.emailValid;
-      let phoneValid = this.state.phoneValid;
+      let emailValid = this.state.emailValid
+      let phoneValid = this.state.phoneValid
       switch(fieldName) {
             case 'email':
-              emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+              // emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+              emailValid = true;
               fieldValidationErrors.email = emailValid ? '' : 'Обязательно оставьте почту';
               break;
             case 'phone':
-              phoneValid = value.length >= 11;
+              phoneValid = value.length >= 10;
               fieldValidationErrors.phone = phoneValid ? '': 'Обязательно оставьте телефон';
               break;
       }
@@ -119,20 +135,24 @@ export default class Card extends React.Component{
           {formErrors: fieldValidationErrors,
                 emailValid: emailValid,
                 phoneValid: phoneValid
-      }, this.validateForm);
+      }, this.isFormValid);
+
     }
 
-    validateForm() {
+    isFormValid() {
+
       this.setState({
           formValid: this.state.emailValid && this.state.phoneValid
       });
+
     }
 
-    onFormHandler = name => event => {
-            this.setState({ [name]: event.target.value },
-            () => { this.validateField(name, event.target.value) }
+    onFormHandler = event => {
+            this.setState({ [event.target.name]: event.target.value },
+            () => { this.validateField(event.target.name, event.target.value) }
             )
     }
+
 
     firstCard(status) {
         let warning;
@@ -141,11 +161,11 @@ export default class Card extends React.Component{
             <div className="first-card">
                 <p>{warning}</p>
                 <label className="common-label" htmlFor="upload-stl">
-                    <input id="upload-stl" type="file" name="calculator-file" onChange={this.toggleFile("stlFile")} className="upload-file"/>
+                    <input id="upload-stl" type="file" name="calculator-file" onChange={this.toggleFile} className="upload-file"/>
                     {this.state.filename}
                     <img src={clip} alt=""/>
                 </label>
-                <input type="submit" placeholder="Рассчитать" onClick={this.sendUploadFile} className="first-card-calculator-btn"/>
+                <input type="submit" placeholder="Рассчитать" disabled={!this.state.uploadFirstFormValid} onClick={this.sendUploadFile} className="first-card-calculator-btn"/>
             </div>
         )
     }
@@ -155,7 +175,7 @@ export default class Card extends React.Component{
                 <div className="form-sent">
                     <h4>Спасибо!! Заявка принята</h4>
                 </div>
-            )
+                )
     }
 
     secondCard(fileData) {
@@ -205,7 +225,7 @@ export default class Card extends React.Component{
                            <input
                                 type="submit"
                                 placeholder="Заказать"
-                                disabled={!this.state.formValid}
+
                                 className="second-card-calculator-btn"
                             />
                         </form>
@@ -223,17 +243,16 @@ export default class Card extends React.Component{
     render() {
       let renderCard
 
-      const {switchCard, status, fileData, sentForm} = this.state
-
+      const {switchCard, status, stlFileData, formValid} = this.state
       if (!switchCard ) {
           renderCard = this.firstCard()
-      }  else if (switchCard && status === 200 && sentForm) {
+      }  else if (switchCard && status === 200 && formValid) {
           renderCard = this.thirdCard()
       } else {
-          if (fileData === null) {
+          if (stlFileData === null) {
               renderCard =  "loading..."
           } else {
-              renderCard = this.secondCard(fileData)
+              renderCard = this.secondCard(stlFileData)
           }
       }
 

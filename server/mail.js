@@ -5,32 +5,31 @@ const path = require("path");
 const mg = mailgun({apiKey: config.mailgunApiKey, domain: config.mailgunDomain});
 
 
-let messageBody
 
-function createMessageTextBody(name, checkbox, comment, stlFilePriceData) {
-    messageBody = `     Имя: ${name}
-                        Телефон: ${phone}
-                        Перезвонить: ${checkbox}
+function createMessageTextBody(name, phone, checkbox, comment, stlFilePriceData) {
+    let emailBody = `Имя: ${name}
+                     Телефон: ${phone}
+                     Перезвонить: ${checkbox}
                         
-                        Сообщение: ${comment} `
+                     Сообщение: ${comment} `
 
     if (stlFilePriceData) {
         let jsonStlFileData = JSON.parse(stlFilePriceData)
-        messageBody += `
+        emailBody += `
         обьем ${jsonStlFileData["volume"]}
         x ${jsonStlFileData["x"]}
         y ${jsonStlFileData["y"]}
         z ${jsonStlFileData["z"]}
         вес ${jsonStlFileData["weight"]}
-        
+
         PLA ${jsonStlFileData["basicFdm"]}
         FORMAX ${jsonStlFileData["forMax"]}
         фотополимер ${jsonStlFileData["basicPhoto"]}
         выжигаемый ${jsonStlFileData["burnPhoto"]}
         нейлон ${jsonStlFileData["nylon"]}
         `
-        return messageBody
     }
+    return emailBody
 }
 
 
@@ -39,20 +38,19 @@ function sendMail(name, email, phone, checkbox, file, comment, stlFileData) {
 
     let subject = phone + name
 
-    messageBody = createMessageTextBody(name, checkbox, comment, stlFileData)
+    let messageBody = createMessageTextBody(name, phone,checkbox, comment, stlFileData)
 
     let mail = {
         from: email,
-        to: 'feedmetal1989@gmail.com',
+        to: '3dfarmspb@gmail.com',
         subject: subject,
         text: messageBody
     };
 
 
-    console.log(file)
+    console.log(file, "mail file")
     if (file) {
-        let fileName = file.originalname
-        mail["attachments"] = path.join("./uploads", fileName);
+        mail["attachment"] = path.join(__dirname, "..", "./uploads/", file.originalname)
     }
 
     console.log(mail, "mail")

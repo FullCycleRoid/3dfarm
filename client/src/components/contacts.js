@@ -13,7 +13,13 @@ export default class Contacts extends React.Component {
                         + 7 (904) 332 89 40
                     </div>
                     <div className="contacts-text">
-                        feedmetal89@gmail.com
+                        3dfarmspb@gmail.com
+                    </div>
+                    <div className="contacts-text">
+                         telegram: @ruby_roid
+                    </div>
+                    <div className="contacts-text">
+                         instagram.com/3dfarmspb
                     </div>
                     <div className="contacts-text">
                          Россия, Санкт-Петербург

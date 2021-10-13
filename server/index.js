@@ -37,7 +37,6 @@ app.post("/contact-form", upload.any(), async (req, res) => {
         stlFileData = null,
         file = Array.from(req.files)[0]
 
-
     sendMail(name, req.body.email, req.body.phone, req.body.isCallbackCheckbox, file, comment, stlFileData)
 
   } catch (err) {
@@ -54,7 +53,8 @@ app.post("/calculator-form", upload.any(), async (req, res) => {
         stlFileData = req.body.stlFileData,
         file = Array.from(req.files)[0]
 
-    console.log(stlFileData, "object")
+
+    console.log(req.body, "req body email")
     sendMail(name, req.body.email, req.body.phone, req.body.isCallbackCheckbox, file, comment, stlFileData)
 
   } catch (err) {
@@ -71,7 +71,7 @@ function extValidator(filename) {
 
 app.post("/calculator", upload.any(), async (req, res) => {
   const file = Array.from(req.files)[0];
-  console.log(file)
+
   if (extValidator(file.filename)) {
     let stlFilePriceData = stlHandler(file)
     res.status(200).send(stlFilePriceData)

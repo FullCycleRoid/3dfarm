@@ -7,9 +7,9 @@ function stlHandler(file) {
 
     let volume = stl.volume.toFixed(0)
 
-    if (volume < 50) volume = volume * 5
+    if (volume < 50) volume = volume * 3
 
-    stlModelValues["volume"] = stl.volume.toFixed(0)
+    stlModelValues["volume"] = volume
     stlModelValues["x"] = stl.boundingBox[0].toFixed(0)
     stlModelValues["y"] = stl.boundingBox[1].toFixed(0)
     stlModelValues["z"] = stl.boundingBox[2].toFixed(0)
