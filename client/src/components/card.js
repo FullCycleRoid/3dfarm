@@ -240,6 +240,8 @@ export default class Card extends React.Component{
         )
     }
 
+
+
     render() {
       let renderCard
 
@@ -255,6 +257,8 @@ export default class Card extends React.Component{
               renderCard = this.secondCard(stlFileData)
           }
       }
+
+
 
       return (
             <div className="card">
