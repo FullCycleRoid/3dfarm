@@ -5,7 +5,7 @@ export default class Sidebar extends React.Component{
     constructor() {
         super();
         this.state = {
-            height: window.innerHeight - 800,
+            height: window.innerHeight / 2 ,
             currentPosition: null
         }
 
@@ -26,10 +26,10 @@ export default class Sidebar extends React.Component{
         return (
             <React.Fragment>
                 <div className={currentPosition > height? "instagram-block": "instagram-block"}>
-                    <a className={currentPosition > height+450? "instagram-dark": " instagram-white"} href="https://www.instagram.com/3dfarmspb/">Instagram</a>
+                    <a className={currentPosition > height? "instagram-dark": " instagram-white"} href="https://www.instagram.com/3dfarmspb/">Instagram</a>
                 </div>
                 <div className={currentPosition > height? "tiktok-block": "tiktok-block "}>
-                    <a className={currentPosition > height+450? "tiktok-dark": " tiktok-white"} href="">TikTok</a>
+                    <a className={currentPosition > height? "tiktok-dark": " tiktok-white"} href="">TikTok</a>
                 </div>
             </React.Fragment>
         )

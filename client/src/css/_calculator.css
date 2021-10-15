@@ -165,10 +165,10 @@ margin-bottom: 5px;
 
 .first-card-calculator-btn {
     display: block;
-    padding: 7px;
-    font-size: 1.2em;
+    padding: 13px 20px;
+    font-size: 1em;
     border: 1px solid #000000;
-    border-radius: 30px;
+    border-radius: 29px;
     cursor: pointer;
 }
 

@@ -259,7 +259,6 @@ export default class Card extends React.Component{
       }
 
 
-
       return (
             <div className="card">
                 {renderCard}

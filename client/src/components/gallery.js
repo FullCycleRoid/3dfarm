@@ -12,6 +12,10 @@ import img10 from "../images/gallery/img10.jpg"
 import img11 from "../images/gallery/img11.jpg"
 import img12 from "../images/gallery/img12.jpg"
 import img13 from "../images/gallery/img13.jpg"
+import img21 from "../images/gallery/img21.jpg"
+import img22 from "../images/gallery/img22.png"
+import img23 from "../images/gallery/img23.png"
+import img24 from "../images/gallery/img24.png"
 
 
 export default class Gallery extends React.Component {
@@ -78,6 +82,18 @@ export default class Gallery extends React.Component {
                     </div>
                     <div className="gallery-block__item">
                         <img src={img13} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img21} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img22} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img23} alt=""/>
+                    </div>
+                    <div className="gallery-block__item">
+                        <img src={img24} alt=""/>
                     </div>
                 </div>
                 <div className="show-more-btn" onClick={this.showFullGallery}>смотреть больше</div>

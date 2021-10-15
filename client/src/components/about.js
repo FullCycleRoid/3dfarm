@@ -2,9 +2,19 @@ import React from 'react';
 import img1 from "../images/first-screen.jpg"
 
 export default class About extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            height: window.innerHeight / 10,
+            width: 0
+        };
+    }
+
     render() {
         return (
-            <div className="about" id="about">
+            <div className="about" id="about" style={{marginTop: this.state.height}}>
                 <div className="first-screen__title-block">
                     <div className="first-screen__title-block__title">
                         Ферма 3D печати - принтеры связаные единым интерфейсом, лучшие показателеи с точки зрения цены, качества и сроков.

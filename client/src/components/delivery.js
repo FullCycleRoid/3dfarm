@@ -11,7 +11,11 @@ export default function Delivery() {
         <div className="delivery" id="delivery">
             <div className="title_block">
                 <h2 className="title"> Доставка</h2>
-                <h3 className="subtitle"></h3>
+                <h3 className="subtitle">Мы постараемся подобрать наиболее подходящий для Вас Способ доставки по всей России</h3>
+            </div>
+
+            <div className="delivery-text">
+                <p></p>
             </div>
             <div className="delivery-block">
                 <div className="delivery-item">
