@@ -147,10 +147,10 @@ export default class Form extends React.Component {
                            onChange={ e => {this.onFileHandler(e)}}
 
                     />
-                    <textarea rows="10"
+                    <textarea rows="8"
                               cols="45"
                               name="comment"
-                              placeholder={"комментарий"}
+                              placeholder={"Техническое задание"}
                               onChange={this.onFormHandler}
                     />
                     <input type="submit" disabled={!this.state.formValid} className="contact-btn"/>
