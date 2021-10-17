@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from "../images/logo.png";
+
 
 class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            height: window.innerHeight / 2,
+            height: window.innerHeight + 80,
             currentPosition: null,
             background: "white"
         }
-
     }
 
     componentDidMount() {
@@ -26,14 +25,9 @@ class Header extends React.Component {
         const {height, currentPosition} = this.state;
 
         return (
-            <header className={currentPosition < height+600? "header bg-white" : "header bg-dark  header-bg-white"}>
+            <header className={currentPosition < height? "header bg-white" : "header bg-dark  header-bg-white"}>
                 <div className="header-inner">
-                    {/*<div>*/}
-                    {/*    <a href="" className={currentPosition > height? "header__logo" : "header__logo hide_element"}>*/}
-                    {/*        <img src={logo} alt=""/>*/}
-                    {/*    </a>*/}
-                    {/*</div>*/}
-
+                    <a href="tel:89043328940" className="phone">8 904 332 89 40</a>
                     <div className="navbar">
                         <a href="#calculator" >калькулятор</a>
                         <a href="#about" >о нас</a>

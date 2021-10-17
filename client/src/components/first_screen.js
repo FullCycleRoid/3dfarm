@@ -10,10 +10,6 @@ function FirstScreen() {
     const screenWidth = window.innerWidth
     const screenHeight = window.innerHeight
 
-    const imageTopOffset = window.innerHeight * 0.7 + "px"
-    const paraTopOffset = window.innerHeight  * 0.8 + "px"
-    const btnTopOffset = window.innerHeight  * 0.88 + "px"
-
     console.log(screenWidth, screenHeight)
 
     return (
@@ -27,19 +23,12 @@ function FirstScreen() {
                     />
                 </div>
                 <div className="first_logo">
-                    <img src={img2} alt=""
-                         style={{top: imageTopOffset}}
-                    />
-                    <p style={{top: paraTopOffset}}>
-                        СКАНИРОВАНИЕ БЕСПЛАТНО
-                    </p>
+                    <img src={img2} alt=""/>
+                    <p>СКАНИРОВАНИЕ БЕСПЛАТНО</p>
+                    <a className="first-screen-btn" href="#calculator">
+                        <img src={arrow} alt=""/>
+                    </a>
                 </div>
-                <a className="first-screen-btn"
-                   href="#calculator"
-                   style={{top: btnTopOffset}}
-                >
-                    <img src={arrow} alt=""/>
-                </a>
             </div>
     )
 }

@@ -5,7 +5,7 @@ export default class Sidebar extends React.Component{
     constructor() {
         super();
         this.state = {
-            height: window.innerHeight / 2 ,
+            height: window.innerHeight / 1.8 ,
             currentPosition: null
         }
 

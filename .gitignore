@@ -12,7 +12,7 @@ node_modules
 .pnp.js
 
 ./idea
-
+./vscode
 # testing
 /coverage
 
@@ -33,4 +33,7 @@ yarn-error.log*
 server/config.js
 ./server/config.js
 
+
 .git/
+./uploads/*
+uploads/*

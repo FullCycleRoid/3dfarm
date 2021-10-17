@@ -18,10 +18,11 @@ function App() {
 
   return (
     <React.Fragment>
+        <FirstScreen />
+        <Sidebar />
         <div className="container">
             <Header />
-            <Sidebar />
-            <FirstScreen />
+            <div className="infill"></div>
             <About />
             <Calculator />
             <Gallery />

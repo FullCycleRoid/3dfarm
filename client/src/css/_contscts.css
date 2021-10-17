@@ -87,3 +87,8 @@ textarea {
     border: 1px solid white;
     color: white;
 }
+
+.phone {
+    text-decoration: none;
+    display: none
+}

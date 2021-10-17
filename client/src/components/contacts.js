@@ -19,7 +19,7 @@ export default class Contacts extends React.Component {
                          telegram: @ruby_roid
                     </div>
                     <div className="contacts-text">
-                         instagram.com/3dfarmspb
+                        <a href="instagram.com/3dfarmspb">instagram.com/3dfarmspb</a>
                     </div>
                     <div className="contacts-text">
                          Россия, Санкт-Петербург

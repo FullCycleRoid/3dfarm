@@ -1,7 +1,9 @@
 .first-screen {
-    height: 100vh;
-    display: flex;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
     font-family: "monserat";
+    position:relative;
 }
 
 .first-screen__title-block {
@@ -17,12 +19,6 @@
     flex: 0 0 80%;
 }
 
-.video-wrapper {
-    position: absolute;
-    top: 0 ;
-    left:0;
-    overflow-y: hidden;
-}
 
 #myVideo {
     width: 100%;
@@ -39,27 +35,23 @@
 }
 
 .first_logo {
-    position: relative;
+    position: absolute;
+    top: 70%;
+    left: 35%
 }
 
 .first_logo P{
-    position: absolute;
-    margin: 0 0 0 340px;
-    top: 80%;
+    margin: 50px 0 0 30px;
     width: 600px;
     text-align: center;
     color: #ffffff;
 }
 
 .first_logo img {
-    position: absolute;
-    margin: 0 0 0 310px;
-    top: 70%;
     animation-name: Appearance;
     animation-duration: 3s;
     filter: invert(1);
 }
-
 
 .instagram,
 .tiktok {
@@ -89,8 +81,9 @@
 
 .first-screen-btn {
     position: absolute;
-    bottom: 50px;
-    left: 50%;
+    left: 45%;
+    top:100%;
+    margin: 30px 0 0 0;
     width:90px;
     height: 90px;
     border-radius: 80px;
@@ -99,7 +92,9 @@
 }
 
 .first-screen-btn img{
-  filter: invert(1);
+    filter: invert(1);
+    width: 10px;
+    margin: 18px 0 0 38px;
 }
 
 @keyframes pulse {
@@ -117,9 +112,4 @@
         transform: scale(0.90);
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
-}
-
-.first-screen-btn img{
-    width: 10px;
-    margin: 18px 0 0 38px;
 }

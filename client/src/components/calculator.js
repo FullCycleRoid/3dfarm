@@ -12,7 +12,7 @@ function Calculator() {
             <Card />
             <div className="calculator-footer-block">
                 <div className="calculator-footer-block__title">
-                    Есть вопросы? Нужна помощь с заказом? Напишите нам
+                    Нужна помощь с заказом? Напишите нам
                 </div>
                 <a className="calculator-footer-block__btn" href="#contacts">
                     <img src={arrow} alt=""/>
