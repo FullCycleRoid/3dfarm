@@ -22,7 +22,6 @@ function App() {
         <Sidebar />
         <div className="container">
             <Header />
-            <div className="infill"></div>
             <About />
             <Calculator />
             <Gallery />
